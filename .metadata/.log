@@ -105,3 +105,112 @@ Binding(CTRL+F,
 
 !ENTRY org.mule.tooling.core 2 0 2020-06-07 10:43:04.240
 !MESSAGE Authenticator was changed to class org.mule.tooling.utils.networking.ProxyAuthenticator. Restoring default authenticator to null
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 10:45:48.231
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 10:45:48.242
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 10:45:49.667
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 10:45:49.675
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.core 2 0 2020-06-07 10:58:52.362
+!MESSAGE No valid home for JDK found. Maven may not work if using a JRE.
+
+!ENTRY org.mule.tooling.core 2 0 2020-06-07 10:58:52.396
+!MESSAGE No valid home for JDK found. Maven may not work if using a JRE.
+
+!ENTRY org.mule.tooling.core 4 0 2020-06-07 10:59:30.645
+!MESSAGE Error while executing ProjectLifecycleAction...class org.mule.tooling.ui.contribution.apigateway.handlers.CreateGatewayDomainAction
+!STACK 0
+java.lang.NullPointerException
+	at org.mule.tooling.ui.contribution.apigateway.utils.GatewayProjectsUtils.canBeAssociatedToAGatewayDomain(GatewayProjectsUtils.java:124)
+	at org.mule.tooling.ui.contribution.apigateway.utils.GatewayProjectsUtils.canBeAssociatedToAGatewayDomain(GatewayProjectsUtils.java:109)
+	at org.mule.tooling.ui.contribution.apigateway.handlers.CreateGatewayDomainAction.execute(CreateGatewayDomainAction.java:24)
+	at org.mule.tooling.core.MuleRuntime.runPostImportActions(MuleRuntime.java:331)
+	at org.mule.tooling.core.packageManager.PostImportActionsJob$1$1.call(PostImportActionsJob.java:27)
+	at org.mule.tooling.core.packageManager.PostImportActionsJob$1$1.call(PostImportActionsJob.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithMuleProject(StudioDesignContextRunner.java:17)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithMuleProject(StudioDesignContextRunner.java:37)
+	at org.mule.tooling.core.packageManager.PostImportActionsJob$1.runInWorkspace(PostImportActionsJob.java:23)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.mule.tooling.core 4 0 2020-06-07 10:59:30.703
+!MESSAGE Error while executing ProjectLifecycleAction...class org.mule.tooling.ui.contribution.apigateway.handlers.CreateGatewayDomainAction
+!STACK 0
+java.lang.NullPointerException
+	at org.mule.tooling.ui.contribution.apigateway.utils.GatewayProjectsUtils.canBeAssociatedToAGatewayDomain(GatewayProjectsUtils.java:124)
+	at org.mule.tooling.ui.contribution.apigateway.utils.GatewayProjectsUtils.canBeAssociatedToAGatewayDomain(GatewayProjectsUtils.java:109)
+	at org.mule.tooling.ui.contribution.apigateway.handlers.CreateGatewayDomainAction.execute(CreateGatewayDomainAction.java:24)
+	at org.mule.tooling.core.MuleRuntime.runPostImportActions(MuleRuntime.java:331)
+	at org.mule.tooling.core.packageManager.PostImportActionsJob$1$1.call(PostImportActionsJob.java:27)
+	at org.mule.tooling.core.packageManager.PostImportActionsJob$1$1.call(PostImportActionsJob.java:1)
+	at org.mule.tooling.utils.SilentRunner.run(SilentRunner.java:25)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithMuleProject(StudioDesignContextRunner.java:17)
+	at org.mule.tooling.core.StudioDesignContextRunner.runSilentWithMuleProject(StudioDesignContextRunner.java:37)
+	at org.mule.tooling.core.packageManager.PostImportActionsJob$1.runInWorkspace(PostImportActionsJob.java:23)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.mule.tooling.maven.ui 4 0 2020-06-07 10:59:39.755
+!MESSAGE There was an error running the studio:studio goal on project mulemaven
+
+!ENTRY org.mule.tooling.maven.ui 4 0 2020-06-07 10:59:39.801
+!MESSAGE There was an error running the studio:studio goal on project mulemaven
+
+!ENTRY org.mule.tooling.maven.ui 4 0 2020-06-07 10:59:39.812
+!MESSAGE There was an error running the studio:studio goal on project mulemaven
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 11:05:48.234
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 11:05:48.310
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 11:05:49.623
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 11:05:49.645
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.core 2 0 2020-06-07 11:15:25.869
+!MESSAGE Server definition does not have a library folder labeled Mule Core Libraries (per app)
+
+!ENTRY org.mule.tooling.core 2 0 2020-06-07 11:15:25.880
+!MESSAGE Server definition does not have a library folder labeled Mule Core Libraries (per app)
+
+!ENTRY org.mule.tooling.core 1 0 2020-06-07 14:49:30.240
+!MESSAGE While generating classpath found that D:\Softwares\AnypointStudio-for-win-64bit\plugins\org.mule.tooling.server.3.9.0_6.4.0.201908221250\mule\lib\endorsed\ is not a directory.
+
+!ENTRY org.mule.tooling.core 1 0 2020-06-07 14:49:30.281
+!MESSAGE While generating classpath found that D:\Softwares\AnypointStudio-for-win-64bit\plugins\org.mule.tooling.server.3.9.0_6.4.0.201908221250\mule\lib\endorsed\ is not a directory.
+
+!ENTRY org.mule.tooling.core 1 0 2020-06-07 14:49:30.292
+!MESSAGE While generating classpath found that D:\Softwares\AnypointStudio-for-win-64bit\plugins\org.mule.tooling.server.3.9.0_6.4.0.201908221250\mule\lib\endorsed\ is not a directory.
+
+!ENTRY org.mule.tooling.core 1 0 2020-06-07 14:49:30.311
+!MESSAGE While generating classpath found that D:\Softwares\AnypointStudio-for-win-64bit\plugins\org.mule.tooling.server.3.9.0_6.4.0.201908221250\mule\lib\endorsed\ is not a directory.
+
+!ENTRY org.mule.tooling.core 1 0 2020-06-07 14:49:30.322
+!MESSAGE While generating classpath found that D:\Softwares\AnypointStudio-for-win-64bit\plugins\org.mule.tooling.server.3.9.0_6.4.0.201908221250\mule\lib\endorsed\ is not a directory.
+
+!ENTRY org.mule.tooling.core 1 0 2020-06-07 14:49:30.336
+!MESSAGE While generating classpath found that D:\Softwares\AnypointStudio-for-win-64bit\plugins\org.mule.tooling.server.3.9.0_6.4.0.201908221250\mule\lib\endorsed\ is not a directory.
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 14:53:06.215
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 14:53:06.320
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 14:53:08.155
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 14:53:08.188
+!MESSAGE Analytics enable property is set with true
