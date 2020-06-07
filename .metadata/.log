@@ -1,0 +1,36 @@
+!SESSION 2020-06-07 10:25:31.686 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_251
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\mule-apps
+
+!ENTRY org.mule.tooling.core 1 0 2020-06-07 10:25:37.774
+!MESSAGE Configuring M2_REPO variable with value: C:\Users\dell\.m2\repository
+
+!ENTRY org.mule.tooling.core 1 0 2020-06-07 10:25:37.790
+!MESSAGE Configuring M2_REPO variable with value: C:\Users\dell\.m2\repository
+
+!ENTRY org.eclipse.ui 4 4 2020-06-07 10:25:39.338
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ContentOutline.
+
+!ENTRY org.eclipse.ui 4 4 2020-06-07 10:25:39.349
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ContentOutline.
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 10:25:47.727
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 10:25:47.735
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 10:29:10.355
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.analytics 1 0 2020-06-07 10:29:10.362
+!MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.core 2 0 2020-06-07 10:29:42.904
+!MESSAGE Unable to resolve source directory for server org.mule.tooling.server.3.9.3.ee
+
+!ENTRY org.mule.tooling.core 2 0 2020-06-07 10:29:42.915
+!MESSAGE Unable to resolve source directory for server org.mule.tooling.server.3.9.3.ee
