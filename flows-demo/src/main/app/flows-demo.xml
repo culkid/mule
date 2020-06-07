@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd">
+	<http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" basePath="flows" doc:name="HTTP Listener Configuration"/>
+	<db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" password="root" database="prashanth" doc:name="MySQL Configuration"/>
+	<smtp:gmail-connector name="Gmail" validateConnections="true" doc:name="Gmail"/>
+	<flow name="flows-demoFlow">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/read" allowedMethods="GET" doc:name="HTTP"/>
+		<flow-ref name="db-sub-flowSub_Flow" doc:name="Flow Reference"/>
+		<smtp:outbound-endpoint host="smtp.gmail.com" port="587" user="culkid26@gmail.com" password="Sanki@123C" connector-ref="Gmail" to="curr.gk@gmail.com" from="culkid26@gmail.com" subject="Successful Execution...!" cc="renukareddy2607@gmail.com" responseTimeout="10000" doc:name="SMTP"/>
+		<set-payload value="program has been successfully generated...!" doc:name="Set Payload"/>
+		<catch-exception-strategy doc:name="Catch Exception Strategy">
+			<set-payload value="#[exception.getMessage()]" doc:name="Set Payload"/>
+			<smtp:outbound-endpoint host="smtp.gmail.com" port="587" user="culkid26@gmail.com" password="Sanki@123C" connector-ref="Gmail" to="curr.gk@gmail.com" from="culkid26@gmail.com" subject="Error Alert" responseTimeout="10000" doc:name="SMTP"/>
+		</catch-exception-strategy>
+	</flow>
+</mule>

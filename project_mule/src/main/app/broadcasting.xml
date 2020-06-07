@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+	<flow name="broadcastingFlow">
+		<file:inbound-endpoint path="broad_inbox" responseTimeout="10000" doc:name="source"/>
+		<object-to-byte-array-transformer doc:name="Object to Byte Array"/>
+		<scatter-gather doc:name="Scatter-Gather">
+			<file:outbound-endpoint path="person_1" responseTimeout="10000" doc:name="outbox1"/>
+			<file:outbound-endpoint path="person_2" responseTimeout="10000" doc:name="outbox2"/>
+			<file:outbound-endpoint path="person_3" responseTimeout="10000" doc:name="outbox3"/>
+		</scatter-gather>
+	</flow>
+</mule>

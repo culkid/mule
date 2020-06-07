@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+	<ws:consumer-config name="tempconverter" wsdlLocation="https://www.w3schools.com/xml/tempconvert.asmx?WSDL" service="TempConvert" port="TempConvertSoap12" serviceAddress="http://www.w3schools.com/xml/tempconvert.asmx" doc:name="Web Service Consumer"/>
+	<http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" basePath="soap" doc:name="HTTP Listener Configuration"/>
+	<flow name="soap_all_operationsFlow">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/temp"  doc:name="HTTP"/>
+		<set-variable variableName="num1" value="#[message.inboundProperties.'http.query.params'.num1]" doc:name="Var1"/>
+		<set-variable variableName="operation" value="#[message.inboundProperties.'http.query.params'.operation]" doc:name="operator"/>
+		<choice doc:name="Choice">
+			<when expression="#[message.inboundProperties.'http.query.params'.operation == 'abc']">
+				<dw:transform-message doc:name="Transform Message">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+%namespace ns0 https://www.w3schools.com/xml/
+---
+{
+	ns0#CelsiusToFahrenheit: {
+		ns0#Celsius: flowVars.num1 as :string
+	}
+}]]></dw:set-payload>
+				</dw:transform-message>
+				<ws:consumer config-ref="tempconverter" operation="CelsiusToFahrenheit" doc:name="Web Service Consumer"/>
+				<dw:transform-message doc:name="Transform Message">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+%namespace ns0 https://www.w3schools.com/xml/
+---
+{
+	f_result:payload.ns0#CelsiusToFahrenheitResponse.ns0#CelsiusToFahrenheitResult
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Transform Message">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+%namespace ns0 https://www.w3schools.com/xml/
+---
+{
+	ns0#FahrenheitToCelsius: {
+		ns0#Fahrenheit: flowVars.num1 as :string
+	}
+}]]></dw:set-payload>
+				</dw:transform-message>
+				<ws:consumer config-ref="tempconverter" operation="FahrenheitToCelsius" doc:name="Web Service Consumer"/>
+				<dw:transform-message doc:name="Transform Message">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+%namespace ns0 https://www.w3schools.com/xml/
+---
+{
+	c_result:payload.ns0#FahrenheitToCelsiusResponse.ns0#FahrenheitToCelsiusResult
+}
+]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+	</flow>
+</mule>

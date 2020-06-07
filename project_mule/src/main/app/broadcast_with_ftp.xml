@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:ftp="http://www.mulesoft.org/schema/mule/ee/ftp" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+	<flow name="broadcast_with_ftpFlow">
+		<file:inbound-endpoint path="bftp_inbox" responseTimeout="10000" doc:name="File"/>
+		<object-to-byte-array-transformer doc:name="Object to Byte Array"/>
+		<scatter-gather doc:name="Scatter-Gather">
+			<processor-chain>
+				<file:outbound-endpoint path="bftp_p1" responseTimeout="10000" doc:name="File"/>
+				<ftp:outbound-endpoint host="ftp.dlptest.com" port="21" user="dlpuser@dlptest.com" password="SzMf7rTE4pCrf9dV286GuNe4N" passive="true" responseTimeout="10000" doc:name="FTP"/>
+			</processor-chain>
+			<file:outbound-endpoint path="bftp_p2" responseTimeout="10000" doc:name="File"/>
+		</scatter-gather>
+	</flow>
+</mule>

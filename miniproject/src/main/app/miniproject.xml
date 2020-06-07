@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ftp="http://www.mulesoft.org/schema/mule/ee/ftp" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+	<ws:consumer-config name="Web_Service_Consumer" wsdlLocation="http://www.dneonline.com/calculator.asmx?WSDL" service="Calculator" port="CalculatorSoap12" serviceAddress="http://www.dneonline.com/calculator.asmx" doc:name="Web Service Consumer"/>
+	<smtp:gmail-connector name="Gmail" validateConnections="true" doc:name="Gmail"/>
+	<http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="${portnumber}" basePath="mule" doc:name="HTTP Listener Configuration"/>
+	<flow name="miniprojectFlow">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/miniproject" doc:name="HTTP"/>
+		<set-variable variableName="var" value="#[message.inboundProperties.'http.query.params'.var]" doc:name="Variable"/>
+		<choice doc:name="Choice">
+			<when expression="#[(message.inboundProperties.'http.query.params'.var) == 'up']">
+				<set-variable variableName="v1" value="#[message.inboundProperties.'http.query.params'.v1]" doc:name="Var 1"/>
+				<set-variable variableName="v2" value="#[message.inboundProperties.'http.query.params'.v2]" doc:name="Var 2"/>
+				<dw:transform-message doc:name="Transform Message">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+%namespace ns0 http://tempuri.org/
+---
+{
+	ns0#Add: {
+		ns0#intA: flowVars.v1 as :number,
+		ns0#intB: flowVars.v2 as :number
+	}
+}]]></dw:set-payload>
+				</dw:transform-message>
+				<ws:consumer config-ref="Web_Service_Consumer" operation="Add" doc:name="Web Service Consumer"/>
+				<dw:transform-message doc:name="Transform Message">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+%namespace ns0 http://tempuri.org/
+---
+{
+	result:payload.ns0#AddResponse.ns0#AddResult
+}]]></dw:set-payload>
+				</dw:transform-message>
+				<flow-ref name="mail_async" doc:name="Flow Reference"/>
+				<set-payload value="mail sent from web consumer flow....please check your mail
+
+${msg}" doc:name="Set Payload"/>
+			</when>
+			<when expression="#[(message.inboundProperties.'http.query.params'.var) == 'mid']">
+				<flow-ref name="database_select" doc:name="Flow Reference"/>
+				<set-payload value="mail sent from mid flow... aka database flow
+
+${msg}" doc:name="Set Payload"/>
+			</when>
+			<when expression="#[(message.inboundProperties.'http.query.params'.var) == 'down']">
+				<flow-ref name="database_select" doc:name="Flow Reference"/>
+				<set-variable variableName="fname" value="#[server.nanoTime()].txt" doc:name="Variable"/>
+				<file:outbound-endpoint path="mini-text" outputPattern="#[flowVars.fname]" responseTimeout="10000" doc:name="text"/>
+				<message-filter throwOnUnaccepted="true" doc:name="Message">
+					<wildcard-filter pattern="*name*" caseSensitive="true"/>
+				</message-filter>
+				<logger message="came till text" level="INFO" doc:name="Logger"/>
+				<scatter-gather doc:name="Scatter-Gather">
+					<file:outbound-endpoint path="mini-outbox1" responseTimeout="10000" doc:name="p1" outputPattern="#[flowVars.fname]"/>
+					<processor-chain>
+						<file:outbound-endpoint path="mini-outbox2" responseTimeout="10000" doc:name="p2" outputPattern="#[flowVars.fname]"/>
+						<logger message="came before ftp #[payload]" level="INFO" doc:name="Logger"/>
+						<ftp:outbound-endpoint host="ftp.dlptest.com" port="21" user="dlpuser@dlptest.com" password="SzMf7rTE4pCrf9dV286GuNe4N" passive="true" responseTimeout="10000" doc:name="FTP" outputPattern="#[flowVars.fname]"/>
+						<set-payload value="file sent to FTP.........
+
+${msg}" doc:name="Set Payload"/>
+					</processor-chain>
+				</scatter-gather>
+			</when>
+			<otherwise>
+				<set-payload value="this is from default section ${msg}" doc:name="Set Payload"/>
+			</otherwise>
+		</choice>
+	</flow>
+</mule>
