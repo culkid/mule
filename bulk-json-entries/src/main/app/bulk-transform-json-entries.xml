@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+	<flow name="bulk-transform-json-entriesFlow">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/bulkentry" doc:name="HTTP"/>
+		<dw:transform-message doc:name="Transform Message" metadata:id="53968e6c-6d12-47ec-b9d8-d02c7ec43cbc">
+			<dw:input-payload doc:sample="D:\mule-apps1\empdata.json" mimeType="application/json"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload]]></dw:set-payload>
+		</dw:transform-message>
+		<db:insert config-ref="MySQL_Configuration" bulkMode="true" doc:name="Database">
+			<db:parameterized-query><![CDATA[insert into datatable(name,gender) values(#[payload.name], #[payload.gender])]]></db:parameterized-query>
+		</db:insert>
+		<set-payload value="bulk entries of data using transform successful.....!" doc:name="Set Payload"/>
+	</flow>
+</mule>
