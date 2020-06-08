@@ -1,0 +1,39 @@
+2020-06-07 20:37:46,972 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'my-first-maven'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-07 20:37:47,420 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-07 20:37:47,748 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-07 20:37:48,171 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-07 20:37:48,172 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-07 20:37:48,450 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@681a8b4e: startup date [Sun Jun 07 20:37:48 IST 2020]; root of context hierarchy
+2020-06-07 20:37:50,742 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-07 20:37:51,821 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-07 20:37:52,427 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\my-first-maven\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\my-first-maven\queue-tx-log\tx2.log
+2020-06-07 20:37:52,486 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\my-first-maven\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\my-first-maven\queue-xa-tx-log\tx2.log
+2020-06-07 20:37:52,529 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-07 20:37:52,534 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: my-first-mavenFlow
+2020-06-07 20:37:52,535 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6cc86152
+2020-06-07 20:37:52,594 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: my-first-mavenFlow.stage1
+2020-06-07 20:37:52,905 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\my-first-maven\my-first-maven.xml'}]"
+2020-06-07 20:37:52,905 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\my-first-maven\my-first-maven.xml'}]"
+2020-06-07 20:37:52,906 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'my-first-maven'                            +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-07 20:37:52,908 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-07 20:37:52,908 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-07 20:37:53,103 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/maven
+2020-06-07 20:37:53,106 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-07 20:37:53,108 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: my-first-mavenFlow
+2020-06-07 20:37:53,111 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: my-first-mavenFlow.stage1
+2020-06-07 20:37:53,150 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-07 20:37:53,349 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: my-first-maven                                        *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
