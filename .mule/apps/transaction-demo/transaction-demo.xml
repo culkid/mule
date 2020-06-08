@@ -11,9 +11,10 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" password="root" database="prashanth" doc:name="MySQL Configuration"/>
 	<flow name="transaction-demoFlow">
 		<http:listener config-ref="HTTP_Listener_Configuration" path="/transfer" doc:name="HTTP"/>
-		<db:bulk-execute config-ref="MySQL_Configuration" doc:name="Database"><![CDATA[update bank set amount=amount-#[json:amount] where account=#[json:from_account];
-update bank set amount=amount+#[json:amount] where account=#[json:to_account]]]>
-		</db:bulk-execute>
+		<transactional action="ALWAYS_BEGIN" doc:name="Transactional">
+			<db:bulk-execute config-ref="MySQL_Configuration" doc:name="Database"><![CDATA[update bank set amount=amount-#[json:amount] where account=#[json:from_account];
+update bank set amount=amount+#[json:amount] where account=#[json:to_account]]]></db:bulk-execute>
+		</transactional>
 		<set-payload value="transfer done.... 9From maven" doc:name="Set Payload"/>
 	</flow>
 </mule>
