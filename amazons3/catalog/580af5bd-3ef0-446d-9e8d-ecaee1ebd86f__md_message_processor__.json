@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Amazon_S3__Basic_Configuration",
+            "typeId": "org.mule.module.s3.model.Bucket"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Amazon_S3__Basic_Configuration",
+            "typeId": "org.mule.module.s3.model.Bucket"
+        }
+    },
+    "id": "580af5bd-3ef0-446d-9e8d-ecaee1ebd86f",
+    "version": "5.2.0.0"
+}
