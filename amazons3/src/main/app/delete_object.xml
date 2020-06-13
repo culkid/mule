@@ -9,7 +9,8 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 http://www.mulesoft.org/schema/mule/s3 http://www.mulesoft.org/schema/mule/s3/current/mule-s3.xsd">
 	<flow name="delete_object_in_awsFlow">
 		<http:listener config-ref="HTTP_Listener_Configuration" path="/delete" doc:name="HTTP"/>
-		<s3:delete-bucket config-ref="Amazon_S3__Basic_Configuration" bucketName="culkid278"  doc:name="Amazon S3"/>
-		<set-payload value="Succesfully Deleted......" doc:name="Set Payload"/>
+		<s3:delete-objects config-ref="Amazon_S3__Basic_Configuration" bucketName="culkid278"  doc:name="Amazon S3" >
+		</s3:delete-objects>
+		<set-payload value="#[payload]" doc:name="Set Payload"/>
 	</flow>
 </mule>

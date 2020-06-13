@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 http://www.mulesoft.org/schema/mule/s3 http://www.mulesoft.org/schema/mule/s3/current/mule-s3.xsd">
 	<flow name="create_bucketFlow">
 		<http:listener config-ref="HTTP_Listener_Configuration" path="/createbucket" doc:name="HTTP"/>
-		<s3:create-bucket config-ref="Amazon_S3__Basic_Configuration" bucketName="culkid278" acl="PUBLIC_READ_WRITE" doc:name="Amazon S3"/>
+		<s3:create-bucket config-ref="Amazon_S3__Basic_Configuration" bucketName="renuka2607" acl="PUBLIC_READ_WRITE" doc:name="Amazon S3"/>
 		<set-payload value="Bucket Created....!" doc:name="Set Payload"/>
 	</flow>
 </mule>

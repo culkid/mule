@@ -1,0 +1,1602 @@
+2020-06-10 20:52:06,030 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 20:52:06,038 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-10 20:52:06,045 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-10 20:52:06,061 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-10 20:52:06,062 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-10 20:52:06,067 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@7459a21e: startup date [Wed Jun 10 20:52:06 IST 2020]; root of context hierarchy
+2020-06-10 20:52:06,344 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-10 20:52:06,539 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-10 20:52:06,541 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-10 20:52:06,544 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-10 20:52:06,565 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-10 20:52:06,590 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-10 20:52:06,592 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-10 20:52:06,592 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@42a0786f
+2020-06-10 20:52:06,598 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-10 20:52:06,622 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 20:52:06,622 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 20:52:06,624 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 20:52:06,628 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-10 20:52:06,628 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-10 20:52:06,971 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=60591e1b
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 20:52:06,971 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=60591e1b
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 20:52:06,971 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-10 20:52:06,972 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=49232c6f
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 20:52:06,972 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=49232c6f
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 20:52:06,972 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-10 20:52:06,975 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-10 20:52:06,976 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-10 20:52:06,976 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-10 20:52:06,984 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:p1
+2020-06-10 20:52:06,984 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:p1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-10 20:52:06,984 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-10 20:52:06,985 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-10 20:52:06,985 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 20:52:06,985 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-10 20:52:07,037 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:p1 has been successfully reconnected.
+2020-06-10 20:52:07,037 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 20:52:07,037 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-10 20:52:07,040 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-10 20:52:07,043 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.p1"
+2020-06-10 20:52:07,043 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.p1"
+2020-06-10 20:52:07,043 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-10 20:52:07,044 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-10 20:52:07,045 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-10 20:52:20,014 [ActiveMQ Session Task-1] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 20:52:20,014 [ActiveMQ Session Task-1] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 20:52:20,069 [[c2].c2Flow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 20:52:20,107 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1924402821'. Object is: FileMessageDispatcher
+2020-06-10 20:52:20,113 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1924402821'. Object is: FileMessageDispatcher
+2020-06-10 20:52:20,166 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\649767813652100.json
+2020-06-10 21:07:37,438 [ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616@51937] ERROR org.mule.exception.DefaultSystemExceptionStrategy - 
+********************************************************************************
+Message               : Connection reset (javax.jms.JMSException)
+JMS Code              : null
+Element               : /Active_MQ @ app:c2.xml:10 (Active MQ)
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.activemq.transport.tcp.TcpBufferedInputStream.fill(TcpBufferedInputStream.java:50)
+	at org.apache.activemq.transport.tcp.TcpTransport$2.fill(TcpTransport.java:634)
+	at org.apache.activemq.transport.tcp.TcpBufferedInputStream.read(TcpBufferedInputStream.java:59)
+	at org.apache.activemq.transport.tcp.TcpTransport$2.read(TcpTransport.java:619)
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	at java.lang.Thread.run(Unknown Source)
+
+********************************************************************************
+
+2020-06-10 21:07:37,471 [ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616@51937] INFO  org.mule.exception.DefaultSystemExceptionStrategy - Exception caught is a ConnectException, attempting to reconnect...
+2020-06-10 21:07:37,483 [ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616@51937] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: Active_MQ
+2020-06-10 21:07:37,485 [ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616@51937] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 21:07:37,538 [ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616@51937] WARN  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Failed to close jms message consumer: Cannot send, channel has already failed: tcp://127.0.0.1:61616
+2020-06-10 21:07:37,538 [ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616@51937] WARN  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Failed to close jms session consumer: Cannot send, channel has already failed: tcp://127.0.0.1:61616
+2020-06-10 21:07:37,690 [ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616@51937] WARN  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Exception closing JMS connection: Disposed due to prior exception
+2020-06-10 21:07:37,690 [ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616@51937] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Disconnected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=stop
+  this=60591e1b
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:07:38,699 [[c2].Mule.02] ERROR org.mule.retry.notifiers.ConnectNotifier - Failed to connect/reconnect: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=stop
+  this=60591e1b
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=false
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+. Root Exception was: Connection refused: connect. Type: class java.net.ConnectException
+2020-06-10 21:07:38,699 [[c2].Mule.02] ERROR org.mule.exception.DefaultSystemExceptionStrategy - Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused: connect
+2020-06-10 21:44:35,429 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 21:44:35,430 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: c2Flow
+2020-06-10 21:44:35,430 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Removing listener on endpointUri: jms://topic:p1
+2020-06-10 21:44:35,430 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 21:44:35,430 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: c2Flow.stage1
+2020-06-10 21:44:35,603 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-10 21:44:35,606 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: connector.file.mule.default
+2020-06-10 21:44:35,621 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'connector.file.mule.default.dispatcher.1924402821'. Object is: FileMessageDispatcher
+2020-06-10 21:44:35,621 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'connector.file.mule.default.dispatcher.1924402821'. Object is: FileMessageDispatcher
+2020-06-10 21:44:35,625 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-10 21:44:35,625 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-10 21:44:35,629 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'c2'                                       +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 21:44:35,629 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-10 21:44:35,630 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: c2Flow
+2020-06-10 21:44:35,630 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: c2Flow.stage1
+2020-06-10 21:44:35,633 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-10 21:44:35,637 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: Active_MQ
+2020-06-10 21:44:35,639 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Disconnected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=stop
+  this=49232c6f
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:44:35,640 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: connector.file.mule.default
+2020-06-10 21:44:35,668 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@7459a21e: startup date [Wed Jun 10 20:52:06 IST 2020]; root of context hierarchy
+2020-06-10 21:44:35,671 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "c2" shut down normally on: 10/6/20 9:44 PM            *
+* Up for: 0 days, 0 hours, 52 mins, 29.46 sec                        *
+**********************************************************************
+2020-06-10 21:44:35,765 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 21:44:35,774 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-10 21:44:35,780 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-10 21:44:35,794 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-10 21:44:35,794 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-10 21:44:35,797 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1bfb1c65: startup date [Wed Jun 10 21:44:35 IST 2020]; root of context hierarchy
+2020-06-10 21:44:36,189 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-10 21:44:36,358 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-10 21:44:36,360 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-10 21:44:36,363 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-10 21:44:36,399 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-10 21:44:36,444 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-10 21:44:36,446 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-10 21:44:36,446 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@43d5ad8a
+2020-06-10 21:44:36,453 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-10 21:44:36,480 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 21:44:36,480 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 21:44:36,482 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 21:44:36,488 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-10 21:44:36,489 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-10 21:44:37,087 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=ca69b2c
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:44:37,087 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=ca69b2c
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:44:37,088 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-10 21:44:37,090 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=66715352
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:44:37,094 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=66715352
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:44:37,103 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-10 21:44:37,107 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-10 21:44:37,108 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-10 21:44:37,108 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-10 21:44:37,129 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:p1
+2020-06-10 21:44:37,129 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:p1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-10 21:44:37,130 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-10 21:44:37,130 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-10 21:44:37,131 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 21:44:37,131 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-10 21:44:37,549 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:p1 has been successfully reconnected.
+2020-06-10 21:44:37,549 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 21:44:37,549 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-10 21:44:37,629 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-10 21:44:37,633 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.p1"
+2020-06-10 21:44:37,633 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.p1"
+2020-06-10 21:44:37,633 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-10 21:44:37,633 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-10 21:44:37,635 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-10 21:46:53,808 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 21:46:53,816 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-10 21:46:53,821 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-10 21:46:53,836 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-10 21:46:53,836 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-10 21:46:53,839 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@4d98e41b: startup date [Wed Jun 10 21:46:53 IST 2020]; root of context hierarchy
+2020-06-10 21:46:54,114 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-10 21:46:54,279 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-10 21:46:54,281 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-10 21:46:54,285 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-10 21:46:54,306 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-10 21:46:54,340 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-10 21:46:54,342 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-10 21:46:54,342 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1c6a0103
+2020-06-10 21:46:54,348 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-10 21:46:54,384 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 21:46:54,385 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 21:46:54,386 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 21:46:54,394 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-10 21:46:54,394 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-10 21:46:54,812 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=231df705
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:46:54,812 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=231df705
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:46:54,812 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-10 21:46:54,812 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=13278a41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:46:54,812 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=13278a41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:46:54,812 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-10 21:46:54,817 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-10 21:46:54,818 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-10 21:46:54,818 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-10 21:46:54,829 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:p1
+2020-06-10 21:46:54,829 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:p1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-10 21:46:54,830 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-10 21:46:54,831 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-10 21:46:54,831 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 21:46:54,832 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-10 21:46:54,884 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:p1 has been successfully reconnected.
+2020-06-10 21:46:54,885 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 21:46:54,885 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-10 21:46:54,887 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-10 21:46:54,890 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.p1"
+2020-06-10 21:46:54,890 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.p1"
+2020-06-10 21:46:54,890 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-10 21:46:54,891 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-10 21:46:54,892 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-10 21:47:08,312 [ActiveMQ Session Task-1] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 21:47:08,312 [ActiveMQ Session Task-1] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 21:47:08,486 [ActiveMQ Session Task-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Failed to build body from content. Serializable class not available to broker. Reason: java.lang.ClassNotFoundException: Forbidden class org.mule.transport.NullPayload! This class is not trusted to be serialized as ObjectMessage payload. Please take a look at http://activemq.apache.org/objectmessage.html for more information on how to configure trusted classes. (javax.jms.JMSException)
+JMS Code              : null
+Payload               : org.mule.api.transformer.TransformerException while getting payload: Failed to build body from content. Serializable class not available to broker. Reason: java.lang.ClassNotFoundException: Forbidden class org.mule.transport.NullPayload! This class is not trusted to be serialized as ObjectMessage payload. Please take a look at http://activemq.apache.org/objectmessage.html for more information on how to configure trusted classes. (javax.jms.JMSException)
+Transformer           : JMSMessageToObject{this=59918c8f, name='JMSMessageToObject#1502710927', ignoreBadInput=false, returnClass=SimpleDataType{type=java.lang.Object, mimeType='*/*', encoding='null'}, sourceTypes=[SimpleDataType{type=javax.jms.Message, mimeType='*/*', encoding='null'}, SimpleDataType{type=javax.jms.TextMessage, mimeType='*/*', encoding='null'}, SimpleDataType{type=javax.jms.ObjectMessage, mimeType='*/*', encoding='null'}, SimpleDataType{type=javax.jms.BytesMessage, mimeType='*/*', encoding='null'}, SimpleDataType{type=javax.jms.MapMessage, mimeType='*/*', encoding='null'}, SimpleDataType{type=javax.jms.StreamMessage, mimeType='*/*', encoding='null'}]}
+Payload Type          : org.apache.activemq.command.ActiveMQObjectMessage
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.ClassNotFoundException: Forbidden class org.mule.transport.NullPayload! This class is not trusted to be serialized as ObjectMessage payload. Please take a look at http://activemq.apache.org/objectmessage.html for more information on how to configure trusted classes.
+	at org.apache.activemq.util.ClassLoadingAwareObjectInputStream.checkSecurity(ClassLoadingAwareObjectInputStream.java:111)
+	at org.apache.activemq.util.ClassLoadingAwareObjectInputStream.resolveClass(ClassLoadingAwareObjectInputStream.java:56)
+	at java.io.ObjectInputStream.readNonProxyDesc(Unknown Source)
+	at java.io.ObjectInputStream.readClassDesc(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject(Unknown Source)
+	at org.apache.activemq.command.ActiveMQObjectMessage.getObject(ActiveMQObjectMessage.java:211)
+	at org.mule.transport.jms.JmsMessageUtils.toObject(JmsMessageUtils.java:256)
+	at org.mule.transport.jms.transformers.AbstractJmsTransformer.transformFromMessage(AbstractJmsTransformer.java:142)
+	at org.mule.transport.jms.transformers.JMSMessageToObject.transformMessage(JMSMessageToObject.java:64)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1643)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1546)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1520)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1503)
+	at org.mule.transport.AbstractMessageReceiver.applyInboundTransformers(AbstractMessageReceiver.java:255)
+	at org.mule.transport.AbstractMessageReceiver.routeMessage(AbstractMessageReceiver.java:223)
+	at org.mule.transport.AbstractMessageReceiver.routeMessage(AbstractMessageReceiver.java:208)
+	at org.mule.transport.AbstractMessageReceiver.routeMessage(AbstractMessageReceiver.java:200)
+	at org.mule.transport.AbstractReceiverWorker$1$1.process(AbstractReceiverWorker.java:153)
+	at org.mule.transport.AbstractReceiverWorker$1$1.process(AbstractReceiverWorker.java:118)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.AbstractReceiverWorker$1.process(AbstractReceiverWorker.java:117)
+	at org.mule.transport.AbstractReceiverWorker$1.process(AbstractReceiverWorker.java:100)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:65)
+	at org.mule.transport.AbstractReceiverWorker.processMessages(AbstractReceiverWorker.java:187)
+	at org.mule.transport.jms.MultiConsumerJmsMessageReceiver$SubReceiver.onMessage(MultiConsumerJmsMessageReceiver.java:492)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1404)
+	at org.apache.activemq.ActiveMQSessionExecutor.dispatch(ActiveMQSessionExecutor.java:131)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:202)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+********************************************************************************
+
+2020-06-10 21:47:09,594 [ActiveMQ Session Task-2] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : "Message with id "ID:PRASHANTH-52326-1591805817929-1:1:2:1:1" has been redelivered 1 times on endpoint "jms://topic:p1", which exceeds the maxRedelivery setting of 0 on the connector "Active_MQ".
+Payload               : org.mule.api.transformer.TransformerException while getting payload: Failed to build body from content. Serializable class not available to broker. Reason: java.lang.ClassNotFoundException: Forbidden class org.mule.transport.NullPayload! This class is not trusted to be serialized as ObjectMessage payload. Please take a look at http://activemq.apache.org/objectmessage.html for more information on how to configure trusted classes. (javax.jms.JMSException)
+Payload Type          : org.apache.activemq.command.ActiveMQObjectMessage
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.transport.jms.redelivery.MessageRedeliveredException: "Message with id "ID:PRASHANTH-52326-1591805817929-1:1:2:1:1" has been redelivered 1 times on endpoint "jms://topic:p1", which exceeds the maxRedelivery setting of 0 on the connector "Active_MQ".
+	at org.mule.transport.jms.redelivery.JmsXRedeliveryHandler.handleRedelivery(JmsXRedeliveryHandler.java:81)
+	at org.mule.transport.jms.MultiConsumerJmsMessageReceiver$JmsWorker.preProcessMessage(MultiConsumerJmsMessageReceiver.java:569)
+	at org.mule.transport.AbstractReceiverWorker$1$1.process(AbstractReceiverWorker.java:122)
+	at org.mule.transport.AbstractReceiverWorker$1$1.process(AbstractReceiverWorker.java:118)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.AbstractReceiverWorker$1.process(AbstractReceiverWorker.java:117)
+	at org.mule.transport.AbstractReceiverWorker$1.process(AbstractReceiverWorker.java:100)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:65)
+	at org.mule.transport.AbstractReceiverWorker.processMessages(AbstractReceiverWorker.java:187)
+	at org.mule.transport.jms.MultiConsumerJmsMessageReceiver$SubReceiver.onMessage(MultiConsumerJmsMessageReceiver.java:492)
+	at org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1404)
+	at org.apache.activemq.ActiveMQMessageConsumer.iterate(ActiveMQMessageConsumer.java:1575)
+	at org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:191)
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+********************************************************************************
+
+2020-06-10 21:55:59,035 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 21:55:59,046 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-10 21:55:59,058 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-10 21:55:59,090 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-10 21:55:59,101 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-10 21:55:59,113 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@4d98e41b: startup date [Wed Jun 10 21:55:59 IST 2020]; root of context hierarchy
+2020-06-10 21:55:59,408 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-10 21:55:59,602 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-10 21:55:59,609 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-10 21:55:59,613 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-10 21:55:59,633 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-10 21:55:59,668 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-10 21:55:59,671 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-10 21:55:59,671 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1c6a0103
+2020-06-10 21:55:59,678 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-10 21:55:59,713 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 21:55:59,713 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 21:55:59,719 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 21:55:59,729 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-10 21:55:59,729 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-10 21:56:00,139 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=231df705
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:56:00,139 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=231df705
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:56:00,139 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-10 21:56:00,140 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=13278a41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:56:00,140 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=13278a41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 21:56:00,140 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-10 21:56:00,145 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-10 21:56:00,146 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-10 21:56:00,146 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-10 21:56:00,158 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:p1
+2020-06-10 21:56:00,159 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:p1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-10 21:56:00,159 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-10 21:56:00,161 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-10 21:56:00,161 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 21:56:00,161 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-10 21:56:00,217 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:p1 has been successfully reconnected.
+2020-06-10 21:56:00,217 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 21:56:00,217 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-10 21:56:00,220 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-10 21:56:00,227 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.p1"
+2020-06-10 21:56:00,227 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.p1"
+2020-06-10 21:56:00,228 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-10 21:56:00,228 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-10 21:56:00,230 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-10 22:00:44,868 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 22:00:44,876 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-10 22:00:44,881 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-10 22:00:44,897 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-10 22:00:44,897 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-10 22:00:44,901 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@4d98e41b: startup date [Wed Jun 10 22:00:44 IST 2020]; root of context hierarchy
+2020-06-10 22:00:45,229 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-10 22:00:45,435 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-10 22:00:45,438 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-10 22:00:45,442 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-10 22:00:45,462 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-10 22:00:45,500 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-10 22:00:45,502 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-10 22:00:45,502 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1c6a0103
+2020-06-10 22:00:45,510 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-10 22:00:45,541 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 22:00:45,542 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 22:00:45,549 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 22:00:45,558 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-10 22:00:45,558 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-10 22:00:45,943 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=231df705
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:00:45,943 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=231df705
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:00:45,943 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-10 22:00:45,943 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=13278a41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:00:45,943 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=13278a41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:00:45,944 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-10 22:00:45,948 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-10 22:00:45,950 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-10 22:00:45,950 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-10 22:00:45,961 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:p1
+2020-06-10 22:00:45,961 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:p1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-10 22:00:45,961 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-10 22:00:45,962 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-10 22:00:45,962 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 22:00:45,963 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-10 22:00:46,035 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:p1 has been successfully reconnected.
+2020-06-10 22:00:46,035 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 22:00:46,036 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-10 22:00:46,038 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-10 22:00:46,041 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.p1"
+2020-06-10 22:00:46,041 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.p1"
+2020-06-10 22:00:46,043 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-10 22:00:46,043 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-10 22:00:46,044 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-10 22:03:59,476 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 22:03:59,481 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: c2Flow
+2020-06-10 22:03:59,481 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Removing listener on endpointUri: jms://topic:p1
+2020-06-10 22:03:59,483 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 22:03:59,540 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 22:03:59,542 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: c2Flow.stage1
+2020-06-10 22:03:59,645 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-10 22:03:59,648 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: Active_MQ
+2020-06-10 22:03:59,650 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: connector.file.mule.default
+2020-06-10 22:03:59,653 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-10 22:03:59,653 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-10 22:03:59,658 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'c2'                                       +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 22:03:59,659 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-10 22:03:59,660 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: c2Flow
+2020-06-10 22:03:59,661 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: c2Flow.stage1
+2020-06-10 22:03:59,663 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-10 22:03:59,826 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Disconnected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=stop
+  this=231df705
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:03:59,829 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: Active_MQ
+2020-06-10 22:03:59,830 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Disconnected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=stop
+  this=13278a41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:03:59,831 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: connector.file.mule.default
+2020-06-10 22:04:00,080 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@4d98e41b: startup date [Wed Jun 10 22:00:44 IST 2020]; root of context hierarchy
+2020-06-10 22:04:00,089 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "c2" shut down normally on: 10/6/20 10:04 PM           *
+* Up for: 0 days, 0 hours, 3 mins, 14.535 sec                        *
+**********************************************************************
+2020-06-10 22:04:00,197 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 22:04:00,212 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-10 22:04:00,219 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-10 22:04:00,236 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-10 22:04:00,239 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-10 22:04:00,244 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@99b54d: startup date [Wed Jun 10 22:04:00 IST 2020]; root of context hierarchy
+2020-06-10 22:04:00,503 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-10 22:04:00,663 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-10 22:04:00,664 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-10 22:04:00,666 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-10 22:04:01,509 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-10 22:04:01,538 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-10 22:04:01,539 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-10 22:04:01,539 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@9776e4e
+2020-06-10 22:04:01,545 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-10 22:04:01,579 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 22:04:01,582 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 22:04:01,585 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 22:04:01,594 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-10 22:04:01,595 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-10 22:04:02,098 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=ffa26a5
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:04:02,098 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=ffa26a5
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:04:02,098 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-10 22:04:02,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=68b2ba8c
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:04:02,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=68b2ba8c
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:04:02,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-10 22:04:02,103 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-10 22:04:02,104 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-10 22:04:02,104 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-10 22:04:02,112 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:pp1
+2020-06-10 22:04:02,113 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:pp1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-10 22:04:02,113 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-10 22:04:02,113 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-10 22:04:02,113 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 22:04:02,113 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-10 22:04:02,167 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:pp1 has been successfully reconnected.
+2020-06-10 22:04:02,167 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 22:04:02,167 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-10 22:04:02,169 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-10 22:04:02,172 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-10 22:04:02,172 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-10 22:04:02,172 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-10 22:04:02,173 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-10 22:04:02,174 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-10 22:05:46,520 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 22:05:46,528 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-10 22:05:46,534 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-10 22:05:46,551 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-10 22:05:46,552 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-10 22:05:46,555 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@4d98e41b: startup date [Wed Jun 10 22:05:46 IST 2020]; root of context hierarchy
+2020-06-10 22:05:46,876 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-10 22:05:47,101 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-10 22:05:47,102 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-10 22:05:47,105 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-10 22:05:47,127 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-10 22:05:47,165 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-10 22:05:47,167 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-10 22:05:47,168 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1c6a0103
+2020-06-10 22:05:47,175 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-10 22:05:47,211 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 22:05:47,211 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-10 22:05:47,212 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-10 22:05:47,220 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-10 22:05:47,220 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-10 22:05:47,622 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=231df705
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:05:47,623 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=231df705
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:05:47,624 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-10 22:05:47,624 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=13278a41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:05:47,624 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=13278a41
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-10 22:05:47,624 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-10 22:05:47,630 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-10 22:05:47,631 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-10 22:05:47,631 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-10 22:05:47,642 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:pp1
+2020-06-10 22:05:47,642 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:pp1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-10 22:05:47,643 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-10 22:05:47,643 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-10 22:05:47,644 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 22:05:47,644 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-10 22:05:47,718 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:pp1 has been successfully reconnected.
+2020-06-10 22:05:47,719 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-10 22:05:47,719 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-10 22:05:47,722 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-10 22:05:47,728 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-10 22:05:47,728 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-10 22:05:47,728 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-10 22:05:47,729 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-10 22:05:47,730 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-10 22:06:02,723 [ActiveMQ Session Task-1] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:06:02,724 [ActiveMQ Session Task-1] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:06:02,760 [[c2].c2Flow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:06:02,775 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.333453243'. Object is: FileMessageDispatcher
+2020-06-10 22:06:02,803 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.333453243'. Object is: FileMessageDispatcher
+2020-06-10 22:06:02,893 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\654190630260900.json
+2020-06-10 22:08:18,483 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:08:18,483 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:08:18,504 [[c2].c2Flow.stage1.03] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:08:18,521 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\654326258749500.json
+2020-06-10 22:08:44,117 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:08:44,118 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:08:44,131 [[c2].c2Flow.stage1.03] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:08:44,159 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\654351891227300.json
+2020-06-10 22:11:10,282 [ActiveMQ Session Task-3] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:11:10,282 [ActiveMQ Session Task-3] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:11:10,301 [[c2].c2Flow.stage1.04] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:11:10,325 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\654498057360100.json
+2020-06-10 22:12:22,936 [ActiveMQ Session Task-4] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:12:22,936 [ActiveMQ Session Task-4] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:12:22,963 [[c2].c2Flow.stage1.05] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:12:23,034 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\654570722551300.json
+2020-06-10 22:14:14,851 [ActiveMQ Session Task-5] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:14:14,851 [ActiveMQ Session Task-5] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:14:14,869 [[c2].c2Flow.stage1.06] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:14:14,871 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\654682622972500.json
+2020-06-10 22:15:32,975 [ActiveMQ Session Task-6] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:15:32,975 [ActiveMQ Session Task-6] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:15:32,991 [[c2].c2Flow.stage1.07] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:15:32,997 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\654760747160000.json
+2020-06-10 22:16:32,083 [ActiveMQ Session Task-7] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:16:32,084 [ActiveMQ Session Task-7] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:16:32,095 [[c2].c2Flow.stage1.07] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:16:32,147 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\654819853577000.json
+2020-06-10 22:17:20,799 [ActiveMQ Session Task-8] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:17:20,799 [ActiveMQ Session Task-8] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:17:20,814 [[c2].c2Flow.stage1.07] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:17:20,824 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\654868575197900.json
+2020-06-10 22:18:54,859 [ActiveMQ Session Task-9] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:18:54,859 [ActiveMQ Session Task-9] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:18:54,888 [[c2].c2Flow.stage1.08] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:18:54,891 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\654962641666700.json
+2020-06-10 22:20:18,127 [ActiveMQ Session Task-10] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:20:18,129 [ActiveMQ Session Task-10] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:20:18,149 [[c2].c2Flow.stage1.09] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:20:18,155 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\655045906479600.json
+2020-06-10 22:21:16,181 [ActiveMQ Session Task-11] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:21:16,181 [ActiveMQ Session Task-11] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:21:16,195 [[c2].c2Flow.stage1.09] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:21:16,200 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\655103950917600.json
+2020-06-10 22:22:09,636 [ActiveMQ Session Task-12] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:22:09,636 [ActiveMQ Session Task-12] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:22:09,645 [[c2].c2Flow.stage1.09] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:22:09,676 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\655157409661300.json
+2020-06-10 22:23:24,471 [ActiveMQ Session Task-13] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:23:24,471 [ActiveMQ Session Task-13] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:23:24,485 [[c2].c2Flow.stage1.10] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:23:24,495 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\655232247094500.json
+2020-06-10 22:24:59,139 [ActiveMQ Session Task-14] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:24:59,139 [ActiveMQ Session Task-14] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-10 22:24:59,149 [[c2].c2Flow.stage1.11] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-10 22:24:59,153 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\655326903889100.json
+2020-06-11 10:23:24,845 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 10:23:24,845 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 10:23:24,845 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 10:23:24,861 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 10:23:24,861 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 10:23:24,861 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@70b2fa10: startup date [Thu Jun 11 10:23:24 IST 2020]; root of context hierarchy
+2020-06-11 10:23:25,137 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 10:23:25,288 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-11 10:23:25,381 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-11 10:23:25,384 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-11 10:23:25,401 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 10:23:25,424 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 10:23:25,426 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-11 10:23:25,426 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@54ccb3
+2020-06-11 10:23:25,433 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-11 10:23:25,460 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-11 10:23:25,460 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-11 10:23:25,462 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 10:23:25,467 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 10:23:25,467 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 10:23:25,874 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=34c62fdf
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:23:25,874 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=34c62fdf
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:23:25,874 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-11 10:23:25,876 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=30508066
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:23:25,877 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=30508066
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:23:25,877 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 10:23:25,883 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 10:23:25,884 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-11 10:23:25,884 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-11 10:23:25,895 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:pp1
+2020-06-11 10:23:25,895 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:pp1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-11 10:23:25,895 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-11 10:23:25,896 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-11 10:23:25,897 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-11 10:23:25,897 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 10:23:25,960 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:pp1 has been successfully reconnected.
+2020-06-11 10:23:25,960 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-11 10:23:25,960 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-11 10:23:25,962 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 10:23:25,966 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-11 10:23:25,967 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-11 10:23:25,967 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-11 10:23:25,967 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-11 10:23:25,968 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 10:26:16,748 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 10:26:16,748 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 10:26:16,764 [[c2].c2Flow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-11 10:26:16,764 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.200165509'. Object is: FileMessageDispatcher
+2020-06-11 10:26:16,764 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.200165509'. Object is: FileMessageDispatcher
+2020-06-11 10:26:16,795 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\5119754907800.json
+2020-06-11 10:34:03,617 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 10:34:03,633 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 10:34:03,633 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 10:34:03,649 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 10:34:03,649 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 10:34:03,649 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@70b2fa10: startup date [Thu Jun 11 10:34:03 IST 2020]; root of context hierarchy
+2020-06-11 10:34:03,945 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 10:34:04,131 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-11 10:34:04,133 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-11 10:34:04,136 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-11 10:34:04,163 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 10:34:04,214 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 10:34:04,217 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-11 10:34:04,218 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@54ccb3
+2020-06-11 10:34:04,228 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-11 10:34:04,286 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-11 10:34:04,287 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-11 10:34:04,288 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 10:34:04,308 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 10:34:04,309 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 10:34:04,908 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=34c62fdf
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:34:04,908 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=34c62fdf
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:34:04,908 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-11 10:34:04,908 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=30508066
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:34:04,908 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=30508066
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:34:04,908 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 10:34:04,913 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 10:34:04,914 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-11 10:34:04,914 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-11 10:34:04,923 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:pp1
+2020-06-11 10:34:04,924 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:pp1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-11 10:34:04,924 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-11 10:34:04,924 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-11 10:34:04,924 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-11 10:34:04,924 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 10:34:04,980 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:pp1 has been successfully reconnected.
+2020-06-11 10:34:04,980 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-11 10:34:04,980 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-11 10:34:04,982 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 10:34:04,986 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-11 10:34:04,986 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-11 10:34:04,987 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-11 10:34:04,988 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-11 10:34:04,996 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 10:34:40,509 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 10:34:40,510 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 10:34:40,564 [[c2].c2Flow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-11 10:34:40,608 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.176604981'. Object is: FileMessageDispatcher
+2020-06-11 10:34:40,618 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.176604981'. Object is: FileMessageDispatcher
+2020-06-11 10:34:40,638 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\5623531378100.json
+2020-06-11 10:43:15,380 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 10:43:15,387 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 10:43:15,393 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 10:43:15,408 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 10:43:15,408 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 10:43:15,411 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@617449dd: startup date [Thu Jun 11 10:43:15 IST 2020]; root of context hierarchy
+2020-06-11 10:43:15,676 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 10:43:15,894 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-11 10:43:15,896 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-11 10:43:15,899 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-11 10:43:15,919 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 10:43:15,949 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 10:43:15,951 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-11 10:43:15,952 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4ee8051c
+2020-06-11 10:43:15,956 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-11 10:43:15,979 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-11 10:43:15,979 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-11 10:43:15,983 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 10:43:15,987 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 10:43:15,987 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 10:43:16,386 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=13192275
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:43:16,386 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=13192275
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:43:16,386 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-11 10:43:16,386 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=27ab206
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:43:16,386 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=27ab206
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:43:16,386 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 10:43:16,386 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 10:43:16,402 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-11 10:43:16,402 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-11 10:43:16,402 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:pp1
+2020-06-11 10:43:16,402 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:pp1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-11 10:43:16,402 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-11 10:43:16,402 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-11 10:43:16,402 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-11 10:43:16,402 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 10:43:16,480 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:pp1 has been successfully reconnected.
+2020-06-11 10:43:16,480 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-11 10:43:16,480 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-11 10:43:16,480 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 10:43:16,480 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-11 10:43:16,480 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-11 10:43:16,480 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-11 10:43:16,480 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-11 10:43:16,480 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 10:43:59,953 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 10:43:59,953 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 10:43:59,980 [[c2].c2Flow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-11 10:43:59,996 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1636695381'. Object is: FileMessageDispatcher
+2020-06-11 10:44:00,006 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1636695381'. Object is: FileMessageDispatcher
+2020-06-11 10:44:00,039 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\6183018550200.json
+2020-06-11 10:46:13,111 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 10:46:13,127 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 10:46:13,127 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 10:46:13,142 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 10:46:13,142 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 10:46:13,142 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@617449dd: startup date [Thu Jun 11 10:46:13 IST 2020]; root of context hierarchy
+2020-06-11 10:46:13,486 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 10:46:13,748 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-11 10:46:13,748 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-11 10:46:13,748 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-11 10:46:13,779 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 10:46:13,826 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 10:46:13,842 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-11 10:46:13,842 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4ee8051c
+2020-06-11 10:46:13,842 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-11 10:46:13,904 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-11 10:46:13,904 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-11 10:46:13,904 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 10:46:13,904 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 10:46:13,920 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 10:46:14,500 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=13192275
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:46:14,500 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=13192275
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:46:14,500 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-11 10:46:14,500 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=27ab206
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:46:14,500 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=27ab206
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:46:14,500 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 10:46:14,517 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 10:46:14,517 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-11 10:46:14,517 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-11 10:46:14,517 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:pp1
+2020-06-11 10:46:14,517 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:pp1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-11 10:46:14,517 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-11 10:46:14,517 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-11 10:46:14,532 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-11 10:46:14,532 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 10:46:14,579 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:pp1 has been successfully reconnected.
+2020-06-11 10:46:14,579 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-11 10:46:14,579 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-11 10:46:14,579 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 10:46:14,595 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-11 10:46:14,595 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-11 10:46:14,595 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-11 10:46:14,595 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-11 10:46:14,595 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 10:49:50,286 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'c2'                                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 10:49:50,295 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-11 10:49:50,298 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-11 10:49:50,311 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-11 10:49:50,311 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-11 10:49:50,313 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@617449dd: startup date [Thu Jun 11 10:49:50 IST 2020]; root of context hierarchy
+2020-06-11 10:49:50,584 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-11 10:49:50,755 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-tx-log\tx2.log
+2020-06-11 10:49:50,756 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\c2\queue-xa-tx-log\tx2.log
+2020-06-11 10:49:50,759 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Active_MQ
+2020-06-11 10:49:50,779 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-11 10:49:50,804 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-11 10:49:50,805 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: c2Flow
+2020-06-11 10:49:50,806 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4ee8051c
+2020-06-11 10:49:50,817 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: c2Flow.stage1
+2020-06-11 10:49:50,847 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-11 10:49:50,848 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\c2\c2.xml'}]"
+2020-06-11 10:49:50,850 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'c2'                                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-11 10:49:50,854 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-11 10:49:50,854 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-11 10:49:51,252 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Connected: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=13192275
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:49:51,252 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Starting: ActiveMQJmsConnector
+{
+  name=Active_MQ
+  lifecycle=initialise
+  this=13192275
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[jms]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:49:51,252 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Active_MQ
+2020-06-11 10:49:51,267 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=27ab206
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:49:51,267 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=27ab206
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-11 10:49:51,267 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-11 10:49:51,267 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-11 10:49:51,267 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: c2Flow
+2020-06-11 10:49:51,267 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: c2Flow.stage1
+2020-06-11 10:49:51,283 [main] INFO  org.mule.transport.jms.activemq.ActiveMQJmsConnector - Registering listener: c2Flow on endpointUri: jms://topic:pp1
+2020-06-11 10:49:51,283 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Destination jms://topic:pp1 is a topic, but 4 receivers have been requested. Will configure only 1.
+2020-06-11 10:49:51,283 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default inbound transformer: org.mule.transport.jms.transformers.JMSMessageToObject
+2020-06-11 10:49:51,283 [main] INFO  org.mule.transport.service.DefaultTransportServiceDescriptor - Loading default response transformer: org.mule.transport.jms.transformers.ObjectToJMSMessage
+2020-06-11 10:49:51,283 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-11 10:49:51,283 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Connecting clusterizable message receiver
+2020-06-11 10:49:51,361 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Endpoint jms://topic:pp1 has been successfully reconnected.
+2020-06-11 10:49:51,361 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MultiConsumerJmsMessageReceiver
+2020-06-11 10:49:51,361 [main] INFO  org.mule.transport.jms.MultiConsumerJmsMessageReceiver - Starting clusterizable message receiver
+2020-06-11 10:49:51,361 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-11 10:49:51,361 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-11 10:49:51,361 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.c2:type=Endpoint,service="c2Flow",connector=Active_MQ,name="endpoint.jms.pp1"
+2020-06-11 10:49:51,361 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="connector.file.mule.default"
+2020-06-11 10:49:51,361 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.c2:type=Connector,name="Active_MQ"
+2020-06-11 10:49:51,361 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: c2                                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-11 10:50:33,907 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 10:50:33,908 [ActiveMQ Session Task-2] WARN  org.mule.session.SerializeAndEncodeSessionHandler - Trying to deserialize a session but no signature validation key specified.
+2020-06-11 10:50:33,927 [[c2].c2Flow.stage1.02] INFO  org.mule.api.processor.LoggerMessageProcessor - consumer 2 flow end.....
+2020-06-11 10:50:33,931 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.840392593'. Object is: FileMessageDispatcher
+2020-06-11 10:50:33,941 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.840392593'. Object is: FileMessageDispatcher
+2020-06-11 10:50:33,970 [[c2].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: D:\mule-apps\jms-prod\c2-data\6576950153500.json
