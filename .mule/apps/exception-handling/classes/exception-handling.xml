@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+<mule xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:spring="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
@@ -8,19 +8,30 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
 http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
-http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd">
 	<http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
 	<db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" password="root" database="prashanth" doc:name="MySQL Configuration"/>
+	<smtp:gmail-connector name="Gmail" validateConnections="true" doc:name="Gmail"/>
 	<flow name="exception-handlingFlow">
 		<http:listener config-ref="HTTP_Listener_Configuration" path="/exception" doc:name="HTTP"/>
 		<db:select config-ref="MySQL_Configuration" doc:name="Database">
 			<db:parameterized-query><![CDATA[select * from salesforce]]></db:parameterized-query>
 		</db:select>
 		<json:object-to-json-transformer doc:name="Object to JSON"/>
-		<file:outbound-endpoint path="error-testing" outputPattern="#[server.nanoTime()].json" responseTimeout="10000" doc:name="File"/>
-		<set-payload value="success...... file data read..!" doc:name="Set Payload"/>
-		<catch-exception-strategy doc:name="Catch Exception Strategy">
-			<set-payload value="error in flow...pls check it again" doc:name="Set Payload"/>
-		</catch-exception-strategy>
+		<file:outbound-endpoint path="C:\Users\dell\Desktop\error_test" outputPattern="#[server.nanoTime()].json" responseTimeout="10000" doc:name="File"/>
+		<set-payload value="successfull....check the file output...." doc:name="Set Payload"/>
+		<smtp:outbound-endpoint host="smtp.gmail.com" port="587" user="curr.gkgmail.com" password="Sanki@123C" connector-ref="Gmail" to="renukareddy2607gmail.com" from="curr.gkgmail.com" subject="testing mail from mulesoft" responseTimeout="10000" doc:name="SMTP"/>
+		<choice-exception-strategy doc:name="Choice Exception Strategy">
+			<catch-exception-strategy when="#[exception.causedBy(java.sql.SQLSyntaxErrorException)]" doc:name="database error">
+				<set-payload value="error from database connector...." doc:name="Set Payload"/>
+			</catch-exception-strategy>
+			<catch-exception-strategy when="#[exception.causedBy(java.io.IOException)]" doc:name="file error">
+				<set-payload value="error from file connector...." doc:name="Set Payload"/>
+			</catch-exception-strategy>
+			<catch-exception-strategy when="#[exception.causedBy(javax.mail.AuthenticationFailedException)]" doc:name="smtp">
+				<set-payload value="check smtp connector" doc:name="Set Payload"/>
+			</catch-exception-strategy>
+		</choice-exception-strategy>
 	</flow>
 </mule>
