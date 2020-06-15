@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "account-api-sample"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "labels-change"
+        }
+    },
+    "id": "c55e29ac-f2e3-4f37-8498-9531ba2b7685",
+    "version": "5.2.0.0"
+}

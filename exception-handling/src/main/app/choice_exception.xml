@@ -17,7 +17,10 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
 		<json:object-to-json-transformer doc:name="Object to JSON"/>
 		<file:outbound-endpoint path="G:\Users\dell\Desktop\ch" outputPattern="#[server.nanoTime()].json" responseTimeout="10000" doc:name="File"/>
 		<set-payload value="No errors.... check the file output" doc:name="Set Payload"/>
-		<choice-exception-strategy doc:name="Choice Exception Strategy">
+		<exception-strategy ref="Choice_exception" doc:name="Reference Exception Strategy"/>
+		
+	</flow>
+		<choice-exception-strategy name="Choice_exception">
 			<catch-exception-strategy when="#[exception.causedBy(java.sql.SQLSyntaxErrorException)]" doc:name="database error handling">
 				<set-payload value="check in database" doc:name="Set Payload"/>
 			</catch-exception-strategy>
@@ -25,5 +28,4 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
 				<set-payload value="check in file connector" doc:name="Set Payload"/>
 			</catch-exception-strategy>
 		</choice-exception-strategy>
-	</flow>
 </mule>

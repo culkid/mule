@@ -1,0 +1,1170 @@
+2020-06-15 13:52:21,001 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 13:52:21,416 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 13:52:21,665 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 13:52:21,801 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 13:52:21,801 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 13:52:22,119 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@21694e53: startup date [Mon Jun 15 13:52:22 IST 2020]; root of context hierarchy
+2020-06-15 13:52:24,506 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 13:52:26,147 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 13:52:26,581 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 13:52:26,605 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 13:52:26,802 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 13:52:26,806 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 13:52:26,806 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1a1cc163
+2020-06-15 13:52:26,864 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 13:52:27,507 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 13:52:27,906 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}]"
+2020-06-15 13:52:27,906 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}]"
+2020-06-15 13:52:27,914 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 13:52:27,919 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 13:52:27,950 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 13:52:27,950 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 13:52:28,020 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 13:52:28,026 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 13:52:28,030 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 13:52:28,030 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 13:52:28,167 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 13:52:28,211 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 13:52:54,310 [[api-customer].HTTP_Listener_Configuration.worker.01] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@3736af20
+Element               : /customer-apiFlow/processors/0 @ api-customer:customer-api.xml:13 (HTTP)
+Element XML           : <http:request config-ref="HTTP_Request_Configuration" path="getall" method="GET" doc:name="HTTP"></http:request>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:438)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:421)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:229)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:119)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.construct.DynamicPipelineMessageProcessor.process(DynamicPipelineMessageProcessor.java:55)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AbstractFilteringMessageProcessor.process(AbstractFilteringMessageProcessor.java:62)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.processBlocking(AbstractRequestResponseMessageProcessor.java:57)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.construct.AbstractPipeline$3.process(AbstractPipeline.java:232)
+	at org.mule.module.http.internal.listener.HttpMessageProcessorTemplate.routeEvent(HttpMessageProcessorTemplate.java:76)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase$1.process(AsyncResponseFlowProcessingPhase.java:73)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase$1.process(AsyncResponseFlowProcessingPhase.java:60)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase.runPhase(AsyncResponseFlowProcessingPhase.java:59)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase.runPhase(AsyncResponseFlowProcessingPhase.java:36)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:69)
+	at com.mulesoft.mule.throttling.ThrottlingPhase.runPhase(ThrottlingPhase.java:197)
+	at com.mulesoft.mule.throttling.ThrottlingPhase.runPhase(ThrottlingPhase.java:61)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65)
+	at com.mulesoft.gateway.http.phases.GatewayValidationPhase.runPhase(GatewayValidationPhase.java:94)
+	at com.mulesoft.gateway.http.phases.GatewayValidationPhase.runPhase(GatewayValidationPhase.java:51)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65)
+	at org.mule.modules.cors.CorsPhase.runPhase(CorsPhase.java:104)
+	at org.mule.modules.cors.CorsPhase.runPhase(CorsPhase.java:35)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.process(PhaseExecutionEngine.java:114)
+	at org.mule.execution.PhaseExecutionEngine.process(PhaseExecutionEngine.java:41)
+	at org.mule.execution.MuleMessageProcessingManager.processMessage(MuleMessageProcessingManager.java:32)
+	at org.mule.module.http.internal.listener.DefaultHttpListener$1.handleRequest(DefaultHttpListener.java:137)
+	at org.mule.module.http.internal.listener.grizzly.GrizzlyRequestDispatcherFilter.handleRead(GrizzlyRequestDispatcherFilter.java:110)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:540)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy.run0(ExecutorPerServerAddressIOStrategy.java:126)
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy.access$100(ExecutorPerServerAddressIOStrategy.java:32)
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy$WorkerThreadRunnable.run(ExecutorPerServerAddressIOStrategy.java:149)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+********************************************************************************
+
+2020-06-15 13:53:23,285 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 13:53:23,288 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-apiFlow
+2020-06-15 13:53:23,289 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-apiFlow.stage1
+2020-06-15 13:53:23,435 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-15 13:53:23,446 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081/customerapi
+2020-06-15 13:53:23,449 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-15 13:53:23,449 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-15 13:53:23,466 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'api-customer'                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 13:53:23,467 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-15 13:53:23,469 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-apiFlow
+2020-06-15 13:53:23,469 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-apiFlow.stage1
+2020-06-15 13:53:23,471 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-15 13:53:23,644 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@21694e53: startup date [Mon Jun 15 13:52:22 IST 2020]; root of context hierarchy
+2020-06-15 13:53:23,655 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "api-customer" shut down normally on: 15/6/20 1:53 PM  *
+* Up for: 0 days, 0 hours, 0 mins, 55.733 sec                        *
+**********************************************************************
+2020-06-15 13:53:23,798 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 13:53:23,814 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 13:53:23,821 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 13:53:23,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 13:53:23,846 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 13:53:23,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@555d5bfd: startup date [Mon Jun 15 13:53:23 IST 2020]; root of context hierarchy
+2020-06-15 13:53:24,186 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 13:53:24,385 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 13:53:24,388 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 13:53:24,428 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 13:53:24,433 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 13:53:24,433 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5d1cc032
+2020-06-15 13:53:24,444 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 13:53:24,474 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 13:53:24,485 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}]"
+2020-06-15 13:53:24,486 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}]"
+2020-06-15 13:53:24,488 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 13:53:24,504 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 13:53:24,504 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 13:53:24,522 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 13:53:24,526 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 13:53:24,530 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 13:53:24,531 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 13:53:24,555 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 13:53:24,567 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 13:53:39,585 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 13:53:39,587 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-apiFlow
+2020-06-15 13:53:39,587 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-apiFlow.stage1
+2020-06-15 13:53:39,773 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-15 13:53:39,784 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081/customerapi
+2020-06-15 13:53:39,786 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-15 13:53:39,786 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-15 13:53:39,800 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'api-customer'                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 13:53:39,800 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-15 13:53:39,801 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-apiFlow
+2020-06-15 13:53:39,801 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-apiFlow.stage1
+2020-06-15 13:53:39,804 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-15 13:53:39,838 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@555d5bfd: startup date [Mon Jun 15 13:53:23 IST 2020]; root of context hierarchy
+2020-06-15 13:53:39,845 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "api-customer" shut down normally on: 15/6/20 1:53 PM  *
+* Up for: 0 days, 0 hours, 0 mins, 15.356 sec                        *
+**********************************************************************
+2020-06-15 13:53:40,002 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 13:53:40,018 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 13:53:40,025 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 13:53:40,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 13:53:40,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 13:53:40,049 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1b3d2a89: startup date [Mon Jun 15 13:53:40 IST 2020]; root of context hierarchy
+2020-06-15 13:53:40,356 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 13:53:40,521 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 13:53:40,522 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 13:53:40,536 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 13:53:40,537 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 13:53:40,538 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@27cfa8da
+2020-06-15 13:53:40,549 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 13:53:40,584 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 13:53:40,597 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}]"
+2020-06-15 13:53:40,597 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}]"
+2020-06-15 13:53:40,599 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 13:53:40,602 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 13:53:40,603 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 13:53:40,618 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 13:53:40,623 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 13:53:40,629 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 13:53:40,630 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 13:53:40,650 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 13:53:40,660 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:02:09,700 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:02:10,018 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:02:10,159 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:02:10,296 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:02:10,296 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:02:10,617 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Mon Jun 15 14:02:10 IST 2020]; root of context hierarchy
+2020-06-15 14:02:12,437 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:02:13,965 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:02:14,442 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:02:14,466 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:02:14,681 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:02:14,688 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:02:14,688 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@ffd4cba
+2020-06-15 14:02:14,750 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:02:14,766 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:02:14,766 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4a92c6a9
+2020-06-15 14:02:14,776 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:02:15,333 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:02:15,682 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}]"
+2020-06-15 14:02:15,682 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}]"
+2020-06-15 14:02:15,688 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:02:15,691 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:02:15,703 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:02:15,703 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:02:15,762 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:02:15,766 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:02:15,768 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:02:15,769 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:02:15,774 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:02:15,775 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:02:15,929 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:02:15,989 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:04:34,795 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:04:35,093 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:04:35,261 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:04:35,426 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:04:35,427 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:04:35,711 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@6ea1bcdc: startup date [Mon Jun 15 14:04:35 IST 2020]; root of context hierarchy
+2020-06-15 14:04:37,639 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:04:39,146 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:04:39,648 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:04:39,674 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:04:39,859 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:04:39,865 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:04:39,866 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@431e86b1
+2020-06-15 14:04:39,931 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:04:39,960 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:04:39,961 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3ba3d4b6
+2020-06-15 14:04:39,968 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:04:39,970 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:04:39,971 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@b0fd744
+2020-06-15 14:04:39,978 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:04:40,788 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:04:41,171 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:04:41,172 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:04:41,176 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:04:41,179 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:04:41,189 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:04:41,189 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:04:41,235 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:04:41,240 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:04:41,242 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:04:41,243 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:04:41,247 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:04:41,248 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:04:41,253 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:04:41,253 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:04:41,462 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:04:41,513 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:08:56,709 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:08:56,712 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-apiFlow
+2020-06-15 14:08:56,713 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-apiFlow.stage1
+2020-06-15 14:08:56,920 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-by-idFlow
+2020-06-15 14:08:56,920 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-by-idFlow.stage1
+2020-06-15 14:08:57,112 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-heartbeatFlow
+2020-06-15 14:08:57,112 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-heartbeatFlow.stage1
+2020-06-15 14:08:57,314 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-15 14:08:57,370 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081/customerapi
+2020-06-15 14:08:57,375 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-15 14:08:57,376 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-15 14:08:57,395 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'api-customer'                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:08:57,396 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-15 14:08:57,398 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-apiFlow
+2020-06-15 14:08:57,399 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-apiFlow.stage1
+2020-06-15 14:08:57,402 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-by-idFlow
+2020-06-15 14:08:57,402 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-by-idFlow.stage1
+2020-06-15 14:08:57,425 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-heartbeatFlow
+2020-06-15 14:08:57,426 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-heartbeatFlow.stage1
+2020-06-15 14:08:57,428 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-15 14:08:57,799 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@6ea1bcdc: startup date [Mon Jun 15 14:04:35 IST 2020]; root of context hierarchy
+2020-06-15 14:08:57,812 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "api-customer" shut down normally on: 15/6/20 2:08 PM  *
+* Up for: 0 days, 0 hours, 4 mins, 16.624 sec                        *
+**********************************************************************
+2020-06-15 14:08:58,096 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:08:58,112 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:08:58,120 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:08:58,183 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:08:58,183 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:08:58,193 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@d8ce754: startup date [Mon Jun 15 14:08:58 IST 2020]; root of context hierarchy
+2020-06-15 14:08:59,494 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:09:00,125 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:09:00,126 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:09:00,144 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:09:00,145 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:09:00,145 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7e7eeb8b
+2020-06-15 14:09:00,151 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:09:00,151 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:09:00,152 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6bd915f7
+2020-06-15 14:09:00,160 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:09:00,160 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:09:00,160 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@498ea76d
+2020-06-15 14:09:00,165 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:09:00,203 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:09:00,212 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:09:00,213 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:09:00,214 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:09:00,219 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:09:00,219 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:09:00,233 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:09:00,236 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:09:00,237 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:09:00,237 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:09:00,243 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:09:00,243 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:09:00,247 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:09:00,247 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:09:00,269 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:09:00,279 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:10:04,816 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:10:05,140 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:10:05,302 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:10:05,483 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:10:05,483 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:10:05,764 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@759fad4: startup date [Mon Jun 15 14:10:05 IST 2020]; root of context hierarchy
+2020-06-15 14:10:07,715 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:10:09,369 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:10:09,864 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:10:09,886 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:10:10,094 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:10:10,101 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:10:10,102 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@d3f4505
+2020-06-15 14:10:10,166 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:10:10,381 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:10:10,381 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@d48e998
+2020-06-15 14:10:10,390 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:10:10,390 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:10:10,390 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2404b5a
+2020-06-15 14:10:10,401 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:10:10,401 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:10:10,401 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@60e3c26e
+2020-06-15 14:10:10,418 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:10:10,835 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:10:11,225 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:10:11,225 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:10:11,230 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:10:11,233 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:10:11,245 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:10:11,245 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:10:11,311 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:10:11,316 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:10:11,317 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:10:11,318 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:10:11,326 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:10:11,326 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:10:11,328 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:10:11,328 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:10:11,333 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:10:11,333 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:10:11,547 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:10:11,904 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:13:02,053 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:13:02,057 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-apiFlow
+2020-06-15 14:13:02,058 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-apiFlow.stage1
+2020-06-15 14:13:02,159 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-by-idFlow
+2020-06-15 14:13:02,160 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-by-idFlow.stage1
+2020-06-15 14:13:02,356 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-create-entryFlow
+2020-06-15 14:13:02,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-create-entryFlow.stage1
+2020-06-15 14:13:02,554 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-heartbeatFlow
+2020-06-15 14:13:02,554 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-heartbeatFlow.stage1
+2020-06-15 14:13:02,559 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-15 14:13:02,625 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081/customerapi
+2020-06-15 14:13:02,626 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-15 14:13:02,626 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-15 14:13:02,640 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'api-customer'                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:13:02,641 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-15 14:13:02,642 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-apiFlow
+2020-06-15 14:13:02,643 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-apiFlow.stage1
+2020-06-15 14:13:02,646 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-by-idFlow
+2020-06-15 14:13:02,646 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-by-idFlow.stage1
+2020-06-15 14:13:02,647 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-create-entryFlow
+2020-06-15 14:13:02,648 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-create-entryFlow.stage1
+2020-06-15 14:13:02,650 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-heartbeatFlow
+2020-06-15 14:13:02,651 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-heartbeatFlow.stage1
+2020-06-15 14:13:02,652 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-15 14:13:02,924 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@759fad4: startup date [Mon Jun 15 14:10:05 IST 2020]; root of context hierarchy
+2020-06-15 14:13:02,938 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "api-customer" shut down normally on: 15/6/20 2:13 PM  *
+* Up for: 0 days, 0 hours, 2 mins, 51.695 sec                        *
+**********************************************************************
+2020-06-15 14:13:03,107 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:13:03,125 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:13:03,135 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:13:03,157 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:13:03,158 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:13:03,169 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1a3019d2: startup date [Mon Jun 15 14:13:03 IST 2020]; root of context hierarchy
+2020-06-15 14:13:04,094 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:13:04,404 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:13:04,409 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:13:04,491 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:13:04,493 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:13:04,494 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3dabb320
+2020-06-15 14:13:04,537 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:13:04,538 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:13:04,538 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@11ccdec2
+2020-06-15 14:13:04,555 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:13:04,556 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:13:04,556 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5511b710
+2020-06-15 14:13:04,567 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:13:04,571 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:13:04,572 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@23d45f1f
+2020-06-15 14:13:04,577 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:13:04,620 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:13:04,634 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:13:04,634 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:13:04,637 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:13:04,641 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:13:04,642 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:13:04,671 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:13:04,677 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:13:04,684 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:13:04,686 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:13:04,711 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:13:04,723 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:13:04,739 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:13:04,739 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:13:04,743 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:13:04,743 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:13:04,772 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:13:04,777 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:13:54,845 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:13:54,846 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-apiFlow
+2020-06-15 14:13:54,846 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-apiFlow.stage1
+2020-06-15 14:13:55,027 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-by-idFlow
+2020-06-15 14:13:55,028 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-by-idFlow.stage1
+2020-06-15 14:13:55,228 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-create-entryFlow
+2020-06-15 14:13:55,228 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-create-entryFlow.stage1
+2020-06-15 14:13:55,428 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: customer-heartbeatFlow
+2020-06-15 14:13:55,429 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: customer-heartbeatFlow.stage1
+2020-06-15 14:13:55,630 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-15 14:13:55,640 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081/customerapi
+2020-06-15 14:13:55,643 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-15 14:13:55,643 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-15 14:13:55,662 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'api-customer'                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:13:55,662 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-15 14:13:55,663 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-apiFlow
+2020-06-15 14:13:55,663 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-apiFlow.stage1
+2020-06-15 14:13:55,664 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-by-idFlow
+2020-06-15 14:13:55,664 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-by-idFlow.stage1
+2020-06-15 14:13:55,664 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-create-entryFlow
+2020-06-15 14:13:55,664 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-create-entryFlow.stage1
+2020-06-15 14:13:55,664 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: customer-heartbeatFlow
+2020-06-15 14:13:55,664 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: customer-heartbeatFlow.stage1
+2020-06-15 14:13:55,666 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-15 14:13:55,691 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@1a3019d2: startup date [Mon Jun 15 14:13:03 IST 2020]; root of context hierarchy
+2020-06-15 14:13:55,693 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "api-customer" shut down normally on: 15/6/20 2:13 PM  *
+* Up for: 0 days, 0 hours, 0 mins, 51.55 sec                         *
+**********************************************************************
+2020-06-15 14:13:55,811 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:13:55,827 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:13:55,838 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:13:55,858 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:13:55,858 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:13:55,865 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@9a8d38e: startup date [Mon Jun 15 14:13:55 IST 2020]; root of context hierarchy
+2020-06-15 14:13:56,431 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:13:56,774 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:13:56,775 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:13:56,788 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:13:56,790 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:13:56,790 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@32903236
+2020-06-15 14:13:56,795 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:13:56,796 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:13:56,796 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6b2d6808
+2020-06-15 14:13:56,805 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:13:56,806 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:13:56,807 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@51907a74
+2020-06-15 14:13:56,811 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:13:56,812 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:13:56,812 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@78517abe
+2020-06-15 14:13:56,821 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:13:56,848 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:13:56,856 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:13:56,858 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:13:56,862 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:13:56,865 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:13:56,865 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:13:56,892 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:13:56,898 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:13:56,906 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:13:56,908 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:13:56,910 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:13:56,910 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:13:56,915 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:13:56,915 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:13:56,922 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:13:56,922 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:13:56,946 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:13:56,961 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:14:33,157 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:14:33,637 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:14:33,841 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:14:34,052 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:14:34,052 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:14:34,319 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@30ed9c6c: startup date [Mon Jun 15 14:14:34 IST 2020]; root of context hierarchy
+2020-06-15 14:14:37,371 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:14:39,261 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:14:39,751 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:14:39,780 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:14:40,033 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:14:40,039 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:14:40,046 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7209ffb5
+2020-06-15 14:14:40,105 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:14:40,379 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:14:40,379 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@50eb4a2c
+2020-06-15 14:14:40,385 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:14:40,385 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:14:40,385 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@31a2a9fa
+2020-06-15 14:14:40,394 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:14:40,395 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:14:40,395 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@65cf4d6d
+2020-06-15 14:14:40,402 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:14:40,729 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:14:41,164 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:14:41,164 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:14:41,169 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:14:41,172 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:14:41,199 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:14:41,199 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:14:41,336 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:14:41,344 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:14:41,346 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:14:41,346 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:14:41,352 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:14:41,352 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:14:41,354 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:14:41,354 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:14:41,357 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:14:41,357 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:14:41,543 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:14:41,585 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:18:05,550 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:18:05,895 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:18:06,053 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:18:06,220 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:18:06,220 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:18:06,549 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@30ed9c6c: startup date [Mon Jun 15 14:18:06 IST 2020]; root of context hierarchy
+2020-06-15 14:18:08,537 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:18:10,129 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:18:10,569 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:18:10,596 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:18:10,781 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:18:10,788 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:18:10,790 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7209ffb5
+2020-06-15 14:18:10,865 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:18:11,243 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:18:11,243 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@50eb4a2c
+2020-06-15 14:18:11,247 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:18:11,248 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:18:11,248 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@31a2a9fa
+2020-06-15 14:18:11,254 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:18:11,255 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:18:11,255 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@65cf4d6d
+2020-06-15 14:18:11,262 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:18:11,577 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:18:11,963 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:18:11,963 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:18:11,968 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:18:11,972 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:18:11,983 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:18:11,983 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:18:12,049 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:18:12,053 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:18:12,058 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:18:12,058 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:18:12,065 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:18:12,066 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:18:12,069 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:18:12,069 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:18:12,073 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:18:12,073 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:18:12,283 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:18:12,327 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:20:21,526 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:20:21,881 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:20:22,050 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:20:22,201 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:20:22,201 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:20:22,502 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@30ed9c6c: startup date [Mon Jun 15 14:20:22 IST 2020]; root of context hierarchy
+2020-06-15 14:20:25,283 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:20:27,033 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:20:27,615 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:20:27,645 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:20:27,869 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:20:27,880 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:20:27,881 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7209ffb5
+2020-06-15 14:20:27,985 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:20:28,349 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:20:28,349 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@50eb4a2c
+2020-06-15 14:20:28,359 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:20:28,360 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:20:28,360 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@31a2a9fa
+2020-06-15 14:20:28,372 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:20:28,372 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:20:28,372 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@65cf4d6d
+2020-06-15 14:20:28,384 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:20:28,781 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:20:29,263 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:20:29,263 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:20:29,268 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:20:29,271 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:20:29,287 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:20:29,287 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:20:29,427 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:20:29,443 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:20:29,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:20:29,448 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:20:29,455 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:20:29,461 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:20:29,464 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:20:29,464 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:20:29,467 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:20:29,467 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:20:30,114 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:20:30,170 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:21:03,913 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:21:04,292 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:21:04,455 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:21:04,587 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:21:04,587 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:21:04,859 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@30ed9c6c: startup date [Mon Jun 15 14:21:04 IST 2020]; root of context hierarchy
+2020-06-15 14:21:06,819 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:21:08,442 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:21:08,893 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:21:08,920 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:21:09,118 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:21:09,125 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:21:09,125 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7209ffb5
+2020-06-15 14:21:09,188 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:21:09,498 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:21:09,498 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@50eb4a2c
+2020-06-15 14:21:09,507 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:21:09,507 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:21:09,507 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@31a2a9fa
+2020-06-15 14:21:09,518 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:21:09,519 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:21:09,519 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@65cf4d6d
+2020-06-15 14:21:09,526 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:21:09,847 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:21:10,228 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:21:10,228 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:21:10,236 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:21:10,239 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:21:10,250 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:21:10,250 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:21:10,306 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:21:10,311 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:21:10,313 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:21:10,314 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:21:10,321 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:21:10,321 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:21:10,325 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:21:10,325 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:21:10,327 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:21:10,327 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:21:10,463 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:21:10,509 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:21:45,351 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:21:45,878 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:21:46,046 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:21:46,203 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:21:46,204 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:21:46,509 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@30ed9c6c: startup date [Mon Jun 15 14:21:46 IST 2020]; root of context hierarchy
+2020-06-15 14:21:48,780 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:21:50,752 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:21:51,176 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:21:51,200 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:21:51,384 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:21:51,396 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:21:51,397 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7209ffb5
+2020-06-15 14:21:51,478 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:21:51,838 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:21:51,838 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@50eb4a2c
+2020-06-15 14:21:51,846 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:21:51,847 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:21:51,847 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@31a2a9fa
+2020-06-15 14:21:51,852 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:21:51,852 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:21:51,852 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@65cf4d6d
+2020-06-15 14:21:51,858 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:21:52,202 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:21:52,560 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:21:52,561 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:21:52,565 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:21:52,569 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:21:52,581 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:21:52,581 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:21:52,638 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:21:52,657 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:21:52,659 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:21:52,660 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:21:52,684 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:21:52,685 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:21:52,697 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:21:52,697 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:21:52,701 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:21:52,707 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:21:52,995 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:21:53,042 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:22:13,138 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:22:13,488 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:22:13,652 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:22:13,806 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:22:13,806 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:22:14,104 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@30ed9c6c: startup date [Mon Jun 15 14:22:14 IST 2020]; root of context hierarchy
+2020-06-15 14:22:16,042 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:22:17,621 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:22:18,025 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:22:18,052 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:22:18,241 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:22:18,246 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:22:18,248 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2fe74516
+2020-06-15 14:22:18,293 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:22:18,652 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:22:18,652 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3069a360
+2020-06-15 14:22:18,659 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:22:18,659 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:22:18,659 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@27a09971
+2020-06-15 14:22:18,668 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:22:18,669 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:22:18,669 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4b0bd001
+2020-06-15 14:22:18,677 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:22:18,983 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:22:19,343 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:22:19,343 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:22:19,350 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:22:19,354 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:22:19,363 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:22:19,363 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:22:19,417 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:22:19,424 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:22:19,426 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:22:19,426 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:22:19,434 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:22:19,434 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:22:19,438 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:22:19,438 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:22:19,441 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:22:19,441 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:22:19,626 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:22:19,672 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:24:33,041 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:24:33,363 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:24:33,527 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:24:33,694 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:24:33,694 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:24:34,044 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@5ae81e1: startup date [Mon Jun 15 14:24:34 IST 2020]; root of context hierarchy
+2020-06-15 14:24:36,174 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:24:37,831 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:24:38,283 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:24:38,303 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:24:38,508 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:24:38,517 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:24:38,518 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@58658f63
+2020-06-15 14:24:38,553 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:24:38,740 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:24:38,740 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@483b0690
+2020-06-15 14:24:38,745 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:24:38,745 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-cleanupFlow
+2020-06-15 14:24:38,745 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5d94a2dc
+2020-06-15 14:24:38,755 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-cleanupFlow.stage1
+2020-06-15 14:24:38,756 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:24:38,756 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@16ac5d35
+2020-06-15 14:24:38,761 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:24:38,762 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:24:38,762 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5649d11a
+2020-06-15 14:24:38,771 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:24:39,204 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:24:39,579 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-cleanup.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:24:39,579 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-cleanup.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:24:39,587 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:24:39,591 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:24:39,606 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:24:39,606 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:24:39,658 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:24:39,668 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:24:39,670 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:24:39,671 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:24:39,679 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:24:39,679 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:24:39,682 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-cleanupFlow
+2020-06-15 14:24:39,682 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-cleanupFlow.stage1
+2020-06-15 14:24:39,686 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:24:39,686 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:24:39,692 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:24:39,692 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:24:39,876 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:24:39,925 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-15 14:25:44,577 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'api-customer'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:25:44,938 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-15 14:25:45,146 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-15 14:25:45,339 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-15 14:25:45,339 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-15 14:25:45,631 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@5ae81e1: startup date [Mon Jun 15 14:25:45 IST 2020]; root of context hierarchy
+2020-06-15 14:25:48,345 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-15 14:25:50,276 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-15 14:25:50,710 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-tx-log\tx2.log
+2020-06-15 14:25:50,741 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\api-customer\queue-xa-tx-log\tx2.log
+2020-06-15 14:25:50,976 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-15 14:25:50,984 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-apiFlow
+2020-06-15 14:25:50,984 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@58658f63
+2020-06-15 14:25:51,055 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-apiFlow.stage1
+2020-06-15 14:25:51,371 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-by-idFlow
+2020-06-15 14:25:51,371 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@483b0690
+2020-06-15 14:25:51,378 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-by-idFlow.stage1
+2020-06-15 14:25:51,378 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-cleanupFlow
+2020-06-15 14:25:51,378 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5d94a2dc
+2020-06-15 14:25:51,389 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-cleanupFlow.stage1
+2020-06-15 14:25:51,389 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-create-entryFlow
+2020-06-15 14:25:51,389 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@16ac5d35
+2020-06-15 14:25:51,395 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-create-entryFlow.stage1
+2020-06-15 14:25:51,395 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: customer-heartbeatFlow
+2020-06-15 14:25:51,395 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5649d11a
+2020-06-15 14:25:51,404 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: customer-heartbeatFlow.stage1
+2020-06-15 14:25:51,827 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2020-06-15 14:25:52,445 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-cleanup.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:25:52,446 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-api.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-by-id.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-cleanup.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-create-entry.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\api-customer\customer-heartbeat.xml'}]"
+2020-06-15 14:25:52,474 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-15 14:25:52,492 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'api-customer'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-15 14:25:52,521 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-15 14:25:52,521 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-15 14:25:52,691 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081/customerapi
+2020-06-15 14:25:52,704 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-15 14:25:52,707 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-apiFlow
+2020-06-15 14:25:52,707 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-apiFlow.stage1
+2020-06-15 14:25:52,719 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-by-idFlow
+2020-06-15 14:25:52,720 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-by-idFlow.stage1
+2020-06-15 14:25:52,723 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-cleanupFlow
+2020-06-15 14:25:52,723 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-cleanupFlow.stage1
+2020-06-15 14:25:52,726 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-create-entryFlow
+2020-06-15 14:25:52,726 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-create-entryFlow.stage1
+2020-06-15 14:25:52,734 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: customer-heartbeatFlow
+2020-06-15 14:25:52,734 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: customer-heartbeatFlow.stage1
+2020-06-15 14:25:53,137 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-15 14:25:53,188 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: api-customer                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************

@@ -11702,3 +11702,767 @@ javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not ac
 
 ********************************************************************************
 
+2020-06-13 19:22:37,489 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'exception-handling'                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-13 19:22:37,771 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-13 19:22:37,864 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-13 19:22:37,974 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-13 19:22:37,974 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-13 19:22:38,224 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@46c670a6: startup date [Sat Jun 13 19:22:38 IST 2020]; root of context hierarchy
+2020-06-13 19:22:39,825 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-13 19:22:40,947 [main] WARN  org.springframework.beans.GenericTypeAwarePropertyDescriptor - Invalid JavaBean property 'port' being accessed! Ambiguous write methods found next to actually used [public void org.mule.endpoint.URIBuilder.setPort(java.lang.String)]: [public void org.mule.endpoint.URIBuilder.setPort(int)]
+2020-06-13 19:22:41,601 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-13 19:22:42,060 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\exception-handling\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\exception-handling\queue-tx-log\tx2.log
+2020-06-13 19:22:42,065 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\exception-handling\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\exception-handling\queue-xa-tx-log\tx2.log
+2020-06-13 19:22:42,081 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Gmail
+2020-06-13 19:22:42,128 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-13 19:22:42,299 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-13 19:22:42,315 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: choice_exceptionFlow
+2020-06-13 19:22:42,315 [main] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@38291795
+2020-06-13 19:22:42,315 [main] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@413bef78
+2020-06-13 19:22:42,315 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@66383c29
+2020-06-13 19:22:42,362 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: choice_exceptionFlow.stage1
+2020-06-13 19:22:42,577 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: exception-handlingFlow
+2020-06-13 19:22:42,577 [main] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@22da2fe6
+2020-06-13 19:22:42,593 [main] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@100ad67e
+2020-06-13 19:22:42,593 [main] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@713a35c5
+2020-06-13 19:22:42,593 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@62aeddc8
+2020-06-13 19:22:42,593 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: exception-handlingFlow.stage1
+2020-06-13 19:22:42,593 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: reference_exceptionFlow
+2020-06-13 19:22:42,593 [main] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@2c0c4c0a
+2020-06-13 19:22:42,593 [main] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@35d26ad2
+2020-06-13 19:22:42,593 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@bb25753
+2020-06-13 19:22:42,593 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: reference_exceptionFlow.stage1
+2020-06-13 19:22:42,765 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\choice_exception.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\exception-handling.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\reference_exception.xml'}]"
+2020-06-13 19:22:42,765 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\choice_exception.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\exception-handling.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\reference_exception.xml'}]"
+2020-06-13 19:22:42,765 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-13 19:22:42,780 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'exception-handling'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-13 19:22:42,796 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-13 19:22:42,796 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-13 19:22:42,827 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-13 19:22:42,843 [main] INFO  org.mule.transport.email.GmailSmtpConnector - Connected: GmailSmtpConnector
+{
+  name=Gmail
+  lifecycle=initialise
+  this=1f95881a
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[smtp]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:22:42,843 [main] INFO  org.mule.transport.email.GmailSmtpConnector - Starting: GmailSmtpConnector
+{
+  name=Gmail
+  lifecycle=initialise
+  this=1f95881a
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[smtp]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:22:42,843 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Gmail
+2020-06-13 19:22:42,843 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=5b40de43
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:22:42,843 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=5b40de43
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:22:42,843 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-13 19:22:42,843 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-13 19:22:42,843 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: choice_exceptionFlow
+2020-06-13 19:22:42,843 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: choice_exceptionFlow.stage1
+2020-06-13 19:22:42,858 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: exception-handlingFlow
+2020-06-13 19:22:42,858 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: exception-handlingFlow.stage1
+2020-06-13 19:22:42,858 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: reference_exceptionFlow
+2020-06-13 19:22:42,858 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: reference_exceptionFlow.stage1
+2020-06-13 19:22:42,905 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-13 19:22:42,936 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.exception-handling:type=Connector,name="Gmail"
+2020-06-13 19:22:42,936 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.exception-handling:type=Connector,name="connector.file.mule.default"
+2020-06-13 19:22:42,936 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: exception-handling                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-13 19:23:22,173 [[exception-handling].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1025726294'. Object is: FileMessageDispatcher
+2020-06-13 19:23:22,180 [[exception-handling].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1025726294'. Object is: FileMessageDispatcher
+2020-06-13 19:23:22,211 [[exception-handling].HTTP_Listener_Configuration.worker.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\dell\Desktop\error_test\test_105696306230600.json
+2020-06-13 19:25:55,228 [[exception-handling].HTTP_Listener_Configuration.worker.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\dell\Desktop\error_test\test_105849325430900.json
+2020-06-13 19:34:14,230 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'exception-handling'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-13 19:34:14,230 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: choice_exceptionFlow
+2020-06-13 19:34:14,230 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: choice_exceptionFlow.stage1
+2020-06-13 19:34:14,418 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: exception-handlingFlow
+2020-06-13 19:34:14,418 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: exception-handlingFlow.stage1
+2020-06-13 19:34:14,621 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: reference_exceptionFlow
+2020-06-13 19:34:14,621 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: reference_exceptionFlow.stage1
+2020-06-13 19:34:14,824 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-13 19:34:14,824 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: Gmail
+2020-06-13 19:34:14,824 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: connector.file.mule.default
+2020-06-13 19:34:14,840 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'connector.file.mule.default.dispatcher.1025726294'. Object is: FileMessageDispatcher
+2020-06-13 19:34:14,887 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing: 'connector.file.mule.default.dispatcher.1025726294'. Object is: FileMessageDispatcher
+2020-06-13 19:34:14,902 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081
+2020-06-13 19:34:14,902 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-13 19:34:14,902 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-13 19:34:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'exception-handling'                       +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-13 19:34:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-13 19:34:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: choice_exceptionFlow
+2020-06-13 19:34:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: choice_exceptionFlow.stage1
+2020-06-13 19:34:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: exception-handlingFlow
+2020-06-13 19:34:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: exception-handlingFlow.stage1
+2020-06-13 19:34:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: reference_exceptionFlow
+2020-06-13 19:34:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: reference_exceptionFlow.stage1
+2020-06-13 19:34:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-13 19:34:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.email.GmailSmtpConnector - Disconnected: GmailSmtpConnector
+{
+  name=Gmail
+  lifecycle=stop
+  this=1f95881a
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[smtp]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:14,933 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: Gmail
+2020-06-13 19:34:14,933 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Disconnected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=stop
+  this=5b40de43
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:14,933 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: connector.file.mule.default
+2020-06-13 19:34:15,121 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@46c670a6: startup date [Sat Jun 13 19:22:38 IST 2020]; root of context hierarchy
+2020-06-13 19:34:15,137 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "exception-handling" shut down normally on: 13/6/20    *
+* 7:34 PM                                                            *
+* Up for: 0 days, 0 hours, 11 mins, 32.341 sec                       *
+**********************************************************************
+2020-06-13 19:34:15,279 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'exception-handling'                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-13 19:34:15,279 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-13 19:34:15,294 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-13 19:34:15,310 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-13 19:34:15,310 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-13 19:34:15,310 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@523544ee: startup date [Sat Jun 13 19:34:15 IST 2020]; root of context hierarchy
+2020-06-13 19:34:15,794 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-13 19:34:16,013 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\exception-handling\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\exception-handling\queue-tx-log\tx2.log
+2020-06-13 19:34:16,013 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\exception-handling\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\exception-handling\queue-xa-tx-log\tx2.log
+2020-06-13 19:34:16,028 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Gmail
+2020-06-13 19:34:16,044 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-13 19:34:16,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-13 19:34:16,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: choice_exceptionFlow
+2020-06-13 19:34:16,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@59cc0007
+2020-06-13 19:34:16,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@791932aa
+2020-06-13 19:34:16,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6d241946
+2020-06-13 19:34:16,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: choice_exceptionFlow.stage1
+2020-06-13 19:34:16,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: exception-handlingFlow
+2020-06-13 19:34:16,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@f0cf56c
+2020-06-13 19:34:16,091 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@40499097
+2020-06-13 19:34:16,091 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@636723c7
+2020-06-13 19:34:16,091 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@56279806
+2020-06-13 19:34:16,107 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: exception-handlingFlow.stage1
+2020-06-13 19:34:16,107 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: reference_exceptionFlow
+2020-06-13 19:34:16,122 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@50e1f14e
+2020-06-13 19:34:16,185 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@295d9d88
+2020-06-13 19:34:16,185 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3f2342cb
+2020-06-13 19:34:16,200 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: reference_exceptionFlow.stage1
+2020-06-13 19:34:16,247 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\choice_exception.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\exception-handling.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\reference_exception.xml'}]"
+2020-06-13 19:34:16,254 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\choice_exception.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\exception-handling.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\reference_exception.xml'}]"
+2020-06-13 19:34:16,256 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'exception-handling'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-13 19:34:16,256 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-13 19:34:16,256 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-13 19:34:16,272 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-13 19:34:16,272 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.email.GmailSmtpConnector - Connected: GmailSmtpConnector
+{
+  name=Gmail
+  lifecycle=initialise
+  this=11b6ebb1
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[smtp]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:16,272 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.email.GmailSmtpConnector - Starting: GmailSmtpConnector
+{
+  name=Gmail
+  lifecycle=initialise
+  this=11b6ebb1
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[smtp]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:16,272 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Gmail
+2020-06-13 19:34:16,272 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=5c539b6b
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:16,272 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=5c539b6b
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:16,272 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-13 19:34:16,272 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-13 19:34:16,287 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: choice_exceptionFlow
+2020-06-13 19:34:16,287 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: choice_exceptionFlow.stage1
+2020-06-13 19:34:16,287 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: exception-handlingFlow
+2020-06-13 19:34:16,287 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: exception-handlingFlow.stage1
+2020-06-13 19:34:16,287 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: reference_exceptionFlow
+2020-06-13 19:34:16,287 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: reference_exceptionFlow.stage1
+2020-06-13 19:34:16,303 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-13 19:34:16,350 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.exception-handling:type=Connector,name="Gmail"
+2020-06-13 19:34:16,350 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.exception-handling:type=Connector,name="connector.file.mule.default"
+2020-06-13 19:34:16,350 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: exception-handling                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-13 19:34:28,494 [[exception-handling].HTTP_Listener_Configuration.worker.01] ERROR org.mule.exception.CatchMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Table 'prashanth.salesforce458' doesn't exist (java.sql.SQLSyntaxErrorException).
+Payload               : {NullPayload}
+Payload Type          : org.mule.transport.NullPayload
+Element               : /reference_exceptionFlow/processors/0 @ exception-handling:reference_exception.xml:14
+Element XML           : <db:select config-ref="MySQL_Configuration" doc:name="Database">
+                        <db:parameterized-query>select * from salesforce458</db:parameterized-query>
+                        </db:select>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.sql.SQLSyntaxErrorException: Table 'prashanth.salesforce458' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)
+	at org.mule.module.db.internal.domain.executor.SelectExecutor.doExecuteQuery(SelectExecutor.java:48)
+	at org.mule.module.db.internal.domain.executor.AbstractSingleQueryExecutor$1.run(AbstractSingleQueryExecutor.java:41)
+	at org.mule.module.db.internal.domain.executor.AbstractSingleQueryExecutor.safely(AbstractSingleQueryExecutor.java:81)
+	at org.mule.module.db.internal.domain.executor.AbstractSingleQueryExecutor.execute(AbstractSingleQueryExecutor.java:35)
+	at org.mule.module.db.internal.processor.SelectMessageProcessor.doExecuteQuery(SelectMessageProcessor.java:67)
+	at org.mule.module.db.internal.processor.AbstractSingleQueryDbMessageProcessor.executeQuery(AbstractSingleQueryDbMessageProcessor.java:52)
+	at org.mule.module.db.internal.processor.AbstractDbMessageProcessor.process(AbstractDbMessageProcessor.java:81)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:119)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.construct.DynamicPipelineMessageProcessor.process(DynamicPipelineMessageProcessor.java:55)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AbstractFilteringMessageProcessor.process(AbstractFilteringMessageProcessor.java:62)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.processBlocking(AbstractRequestResponseMessageProcessor.java:57)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.construct.AbstractPipeline$3.process(AbstractPipeline.java:232)
+	at org.mule.module.http.internal.listener.HttpMessageProcessorTemplate.routeEvent(HttpMessageProcessorTemplate.java:76)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase$1.process(AsyncResponseFlowProcessingPhase.java:73)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase$1.process(AsyncResponseFlowProcessingPhase.java:60)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase.runPhase(AsyncResponseFlowProcessingPhase.java:59)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase.runPhase(AsyncResponseFlowProcessingPhase.java:36)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:69)
+	at com.mulesoft.mule.throttling.ThrottlingPhase.runPhase(ThrottlingPhase.java:197)
+	at com.mulesoft.mule.throttling.ThrottlingPhase.runPhase(ThrottlingPhase.java:61)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65)
+	at com.mulesoft.gateway.http.phases.GatewayValidationPhase.runPhase(GatewayValidationPhase.java:94)
+	at com.mulesoft.gateway.http.phases.GatewayValidationPhase.runPhase(GatewayValidationPhase.java:51)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65)
+	at org.mule.modules.cors.CorsPhase.runPhase(CorsPhase.java:104)
+	at org.mule.modules.cors.CorsPhase.runPhase(CorsPhase.java:35)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.process(PhaseExecutionEngine.java:114)
+	at org.mule.execution.PhaseExecutionEngine.process(PhaseExecutionEngine.java:41)
+	at org.mule.execution.MuleMessageProcessingManager.processMessage(MuleMessageProcessingManager.java:32)
+	at org.mule.module.http.internal.listener.DefaultHttpListener$1.handleRequest(DefaultHttpListener.java:137)
+	at org.mule.module.http.internal.listener.grizzly.GrizzlyRequestDispatcherFilter.handleRead(GrizzlyRequestDispatcherFilter.java:110)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:540)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy.run0(ExecutorPerServerAddressIOStrategy.java:126)
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy.access$100(ExecutorPerServerAddressIOStrategy.java:32)
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy$WorkerThreadRunnable.run(ExecutorPerServerAddressIOStrategy.java:149)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+********************************************************************************
+
+2020-06-13 19:34:51,904 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'exception-handling'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-13 19:34:51,904 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: choice_exceptionFlow
+2020-06-13 19:34:51,904 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: choice_exceptionFlow.stage1
+2020-06-13 19:34:51,919 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: exception-handlingFlow
+2020-06-13 19:34:51,919 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: exception-handlingFlow.stage1
+2020-06-13 19:34:52,123 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: reference_exceptionFlow
+2020-06-13 19:34:52,123 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: reference_exceptionFlow.stage1
+2020-06-13 19:34:52,326 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-13 19:34:52,326 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: Gmail
+2020-06-13 19:34:52,326 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: connector.file.mule.default
+2020-06-13 19:34:52,341 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081
+2020-06-13 19:34:52,341 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-13 19:34:52,341 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-13 19:34:52,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'exception-handling'                       +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-13 19:34:52,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-13 19:34:52,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: choice_exceptionFlow
+2020-06-13 19:34:52,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: choice_exceptionFlow.stage1
+2020-06-13 19:34:52,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: exception-handlingFlow
+2020-06-13 19:34:52,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: exception-handlingFlow.stage1
+2020-06-13 19:34:52,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: reference_exceptionFlow
+2020-06-13 19:34:52,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: reference_exceptionFlow.stage1
+2020-06-13 19:34:52,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-13 19:34:52,372 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.email.GmailSmtpConnector - Disconnected: GmailSmtpConnector
+{
+  name=Gmail
+  lifecycle=stop
+  this=11b6ebb1
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[smtp]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:52,372 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: Gmail
+2020-06-13 19:34:52,372 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Disconnected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=stop
+  this=5c539b6b
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:52,372 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing connector: connector.file.mule.default
+2020-06-13 19:34:52,404 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@523544ee: startup date [Sat Jun 13 19:34:15 IST 2020]; root of context hierarchy
+2020-06-13 19:34:52,404 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "exception-handling" shut down normally on: 13/6/20    *
+* 7:34 PM                                                            *
+* Up for: 0 days, 0 hours, 0 mins, 36.148 sec                        *
+**********************************************************************
+2020-06-13 19:34:52,482 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'exception-handling'                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-13 19:34:52,497 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-13 19:34:52,497 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-13 19:34:52,513 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-13 19:34:52,513 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-13 19:34:52,513 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@8c1c367: startup date [Sat Jun 13 19:34:52 IST 2020]; root of context hierarchy
+2020-06-13 19:34:52,913 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-13 19:34:53,065 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\exception-handling\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\exception-handling\queue-tx-log\tx2.log
+2020-06-13 19:34:53,065 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\exception-handling\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\exception-handling\queue-xa-tx-log\tx2.log
+2020-06-13 19:34:53,081 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: Gmail
+2020-06-13 19:34:53,081 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2020-06-13 19:34:53,112 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-13 19:34:53,112 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: choice_exceptionFlow
+2020-06-13 19:34:53,112 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@2b8f14d8
+2020-06-13 19:34:53,112 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@31e67250
+2020-06-13 19:34:53,112 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@75217ea8
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: choice_exceptionFlow.stage1
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: exception-handlingFlow
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@24637aa4
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@3f37c47a
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@7be197a9
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@37c17c8e
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: exception-handlingFlow.stage1
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: reference_exceptionFlow
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@237e5fd5
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.CatchMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.CatchMessagingExceptionStrategy@2007c41
+2020-06-13 19:34:53,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@44020f73
+2020-06-13 19:34:53,143 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: reference_exceptionFlow.stage1
+2020-06-13 19:34:53,159 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\choice_exception.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\exception-handling.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\reference_exception.xml'}]"
+2020-06-13 19:34:53,159 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\choice_exception.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\exception-handling.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\exception-handling\reference_exception.xml'}]"
+2020-06-13 19:34:53,159 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'exception-handling'                        +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-13 19:34:53,174 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-13 19:34:53,174 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-13 19:34:53,174 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-13 19:34:53,190 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.email.GmailSmtpConnector - Connected: GmailSmtpConnector
+{
+  name=Gmail
+  lifecycle=initialise
+  this=78f00122
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[smtp]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:53,190 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.email.GmailSmtpConnector - Starting: GmailSmtpConnector
+{
+  name=Gmail
+  lifecycle=initialise
+  this=78f00122
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[smtp]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:53,190 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: Gmail
+2020-06-13 19:34:53,190 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=10185bf8
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:53,206 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=10185bf8
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2020-06-13 19:34:53,206 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2020-06-13 19:34:53,206 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-13 19:34:53,206 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: choice_exceptionFlow
+2020-06-13 19:34:53,206 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: choice_exceptionFlow.stage1
+2020-06-13 19:34:53,206 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: exception-handlingFlow
+2020-06-13 19:34:53,206 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: exception-handlingFlow.stage1
+2020-06-13 19:34:53,221 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: reference_exceptionFlow
+2020-06-13 19:34:53,221 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: reference_exceptionFlow.stage1
+2020-06-13 19:34:53,221 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-13 19:34:53,237 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.exception-handling:type=Connector,name="Gmail"
+2020-06-13 19:34:53,237 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.exception-handling:type=Connector,name="connector.file.mule.default"
+2020-06-13 19:34:53,237 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: exception-handling                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-13 19:35:11,517 [[exception-handling].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1272347761'. Object is: FileMessageDispatcher
+2020-06-13 19:35:11,524 [[exception-handling].HTTP_Listener_Configuration.worker.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1272347761'. Object is: FileMessageDispatcher
+2020-06-13 19:35:11,571 [[exception-handling].HTTP_Listener_Configuration.worker.01] ERROR org.mule.exception.CatchMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Streaming failed. Could not get output stream. Failed to route event via endpoint: DefaultOutboundEndpoint{endpointUri=file:///P:/Users/dell/Desktop/error_test, connector=FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=start
+  this=10185bf8
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+,  name='endpoint..P.Users.dell.Desktop.error.test', mep=ONE_WAY, properties={outputPattern=test_#[server.nanoTime()].json}, transactionConfig=Transaction{factory=null, action=INDIFFERENT, timeout=0}, deleteUnacceptedMessages=false, initialState=started, responseTimeout=10000, endpointEncoding=UTF-8, disableTransportTransformer=false}.
+Payload               : [{"phone":65487,"name":"kiranmai"},{"phone":789456,"name":"prashanth"}]
+Payload Type          : java.lang.String
+Element               : /reference_exceptionFlow/processors/2 @ exception-handling:reference_exception.xml:18 (File)
+Element XML           : <file:outbound-endpoint path="P:\Users\dell\Desktop\error_test" outputPattern="test_#[server.nanoTime()].json" responseTimeout="10000" doc:name="File"></file:outbound-endpoint>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.io.IOException: The system cannot find the path specified
+	at java.io.WinNTFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(Unknown Source)
+	at org.mule.util.FileUtils.createFile(FileUtils.java:106)
+	at org.mule.transport.file.FileConnector.getOutputStream(FileConnector.java:561)
+	at org.mule.transport.file.FileMessageDispatcher.doDispatch(FileMessageDispatcher.java:55)
+	at org.mule.transport.AbstractMessageDispatcher.process(AbstractMessageDispatcher.java:109)
+	at org.mule.transport.AbstractConnector$DispatcherMessageProcessor.process(AbstractConnector.java:2735)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:119)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.processBlocking(AbstractRequestResponseMessageProcessor.java:57)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.EndpointTransactionalInterceptingMessageProcessor.process(EndpointTransactionalInterceptingMessageProcessor.java:73)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AbstractFilteringMessageProcessor.process(AbstractFilteringMessageProcessor.java:62)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.endpoint.DefaultOutboundEndpoint.process(DefaultOutboundEndpoint.java:100)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.module.db.internal.processor.AbstractDbMessageProcessor.process(AbstractDbMessageProcessor.java:104)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:119)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.construct.DynamicPipelineMessageProcessor.process(DynamicPipelineMessageProcessor.java:55)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AbstractFilteringMessageProcessor.process(AbstractFilteringMessageProcessor.java:62)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.processBlocking(AbstractRequestResponseMessageProcessor.java:57)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.construct.AbstractPipeline$3.process(AbstractPipeline.java:232)
+	at org.mule.module.http.internal.listener.HttpMessageProcessorTemplate.routeEvent(HttpMessageProcessorTemplate.java:76)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase$1.process(AsyncResponseFlowProcessingPhase.java:73)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase$1.process(AsyncResponseFlowProcessingPhase.java:60)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase.runPhase(AsyncResponseFlowProcessingPhase.java:59)
+	at org.mule.execution.AsyncResponseFlowProcessingPhase.runPhase(AsyncResponseFlowProcessingPhase.java:36)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:69)
+	at com.mulesoft.mule.throttling.ThrottlingPhase.runPhase(ThrottlingPhase.java:197)
+	at com.mulesoft.mule.throttling.ThrottlingPhase.runPhase(ThrottlingPhase.java:61)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65)
+	at com.mulesoft.gateway.http.phases.GatewayValidationPhase.runPhase(GatewayValidationPhase.java:94)
+	at com.mulesoft.gateway.http.phases.GatewayValidationPhase.runPhase(GatewayValidationPhase.java:51)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.phaseSuccessfully(PhaseExecutionEngine.java:65)
+	at org.mule.modules.cors.CorsPhase.runPhase(CorsPhase.java:104)
+	at org.mule.modules.cors.CorsPhase.runPhase(CorsPhase.java:35)
+	at org.mule.execution.PhaseExecutionEngine$InternalPhaseExecutionEngine.process(PhaseExecutionEngine.java:114)
+	at org.mule.execution.PhaseExecutionEngine.process(PhaseExecutionEngine.java:41)
+	at org.mule.execution.MuleMessageProcessingManager.processMessage(MuleMessageProcessingManager.java:32)
+	at org.mule.module.http.internal.listener.DefaultHttpListener$1.handleRequest(DefaultHttpListener.java:137)
+	at org.mule.module.http.internal.listener.grizzly.GrizzlyRequestDispatcherFilter.handleRead(GrizzlyRequestDispatcherFilter.java:110)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:540)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy.run0(ExecutorPerServerAddressIOStrategy.java:126)
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy.access$100(ExecutorPerServerAddressIOStrategy.java:32)
+	at org.mule.module.http.internal.listener.grizzly.ExecutorPerServerAddressIOStrategy$WorkerThreadRunnable.run(ExecutorPerServerAddressIOStrategy.java:149)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+********************************************************************************
+

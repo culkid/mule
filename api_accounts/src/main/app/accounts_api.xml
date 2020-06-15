@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+	<http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" basePath="api" doc:name="HTTP Listener Configuration"/>
+	<http:request-config name="Accounts_API" host="localhost" port="9999" basePath="account" doc:name="HTTP Request Configuration"/>
+	<flow name="accounts_apiFlow">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/accountlist" allowedMethods="GET" doc:name="HTTP"/>
+		<http:request config-ref="Accounts_API" path="accounts" method="GET" doc:name="rest_API"/>
+		<dw:transform-message doc:name="Transform Message" metadata:id="19570eb4-d571-4d30-88b0-7a9492e181f8">
+			<dw:input-payload mimeType="application/json"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+payload map ((payload01 , indexOfPayload01) -> {
+	cid: payload01.accoundNumber,
+	customername: payload01.accountHolderName,
+	mobile: payload01.phone,
+	email: payload01.email,
+	bank: payload01.accountProvider
+})]]></dw:set-payload>
+		</dw:transform-message>
+	</flow>
+</mule>
