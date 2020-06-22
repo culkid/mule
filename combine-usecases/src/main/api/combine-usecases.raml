@@ -1,0 +1,87 @@
+#%RAML 0.8
+title: usecase_1
+baseUri: http://localhost:8888/usecase
+/personal: 
+  get: 
+    description: this fetches the personal details of a person
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: |
+              {
+              "customerID":"100",
+              "Name":"Prashanth",
+              "Gender":"Male",
+              "Phone":"12345",
+              "Email":"test@gmail.com"
+              }
+
+/account:
+  get: 
+    queryParameters: 
+      phone:
+        example: 00000
+        required: true
+        type: string
+   
+
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: |
+              [
+                {
+                  "Phone":"12345",
+                  "Account Number":"122222222",
+                  "Balance":"100000.00",
+                  "Provider":"HDFC Bank"
+                },
+                {
+                  "Phone":"678910",
+                  "Account Number":"45645645",
+                  "Balance":"7851654.00",
+                  "Provider":"SBI Bank"
+                },
+                {
+                  "Phone":"111213",
+                  "Account Number":"4251651",
+                  "Balance":"556160.00",
+                  "Provider":"Axis Bank"
+                }
+              ]
+
+/social:
+  get: 
+    queryParameters: 
+      phone:
+        example: 00000
+        required: true
+        type: string
+  
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: |
+              [
+                {
+                  "Phone":"12345",
+                  "Email":"abc@gmail.com",
+                  "PAN":"34SD34ER",
+                  "Aadhar":"4578-4578-4578"
+                },
+                {
+                  "Phone":"678910",
+                  "Email":"apple@gmail.com",
+                  "PAN":"6DG68FYH",
+                  "Aadhar":"7845-7985-7845"
+                },
+                {
+                  "Phone":"500",
+                  "Email":"orange@gmail.com",
+                  "PAN":"854GHG65",
+                  "Aadhar":"1234-1234-1234"
+                }
+              ]

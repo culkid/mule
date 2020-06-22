@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd">
+    <http:listener-config xmlns:http="http://www.mulesoft.org/schema/mule/http" name="usecase-xml-3-account-httpListenerConfig" host="localhost" port="8099" doc:name="HTTP Listener Configuration"/>
+    <apikit:config xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" name="usecase-xml-3-account-config" raml="usecase-xml-3-account.raml" consoleEnabled="false" doc:name="Router"/>
+    <flow name="usecase-xml-3-account-main">
+        <http:listener xmlns:http="http://www.mulesoft.org/schema/mule/http" config-ref="usecase-xml-3-account-httpListenerConfig" path="/api/*" doc:name="HTTP"/>
+        <apikit:router xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" config-ref="usecase-xml-3-account-config" doc:name="APIkit Router"/>
+        <exception-strategy ref="usecase-xml-3-account-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="usecase-xml-3-account-console">
+        <http:listener xmlns:http="http://www.mulesoft.org/schema/mule/http" config-ref="usecase-xml-3-account-httpListenerConfig" path="/console/*" doc:name="HTTP"/>
+        <apikit:console xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" config-ref="usecase-xml-3-account-config" doc:name="APIkit Console"/>
+    </flow>
+    <flow name="get:/account:usecase-xml-3-account-config">
+        <set-payload value="&lt;account&gt;
+	&lt;Phone&gt;12345&lt;/Phone&gt;
+    &lt;Account_Number&gt;122222222&lt;/Account_Number&gt;
+    &lt;Balance&gt;100000&lt;/Balance&gt;
+    &lt;Provider&gt;HDFC Bank&lt;/Provider&gt;
+&lt;/account&gt;" doc:name="Set Payload"/>
+    </flow>
+    <apikit:mapping-exception-strategy xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" name="usecase-xml-3-account-apiKitGlobalExceptionMapping">
+        <apikit:mapping statusCode="404">
+            <apikit:exception value="org.mule.module.apikit.exception.NotFoundException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Resource not found&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="405">
+            <apikit:exception value="org.mule.module.apikit.exception.MethodNotAllowedException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Method not allowed&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="415">
+            <apikit:exception value="org.mule.module.apikit.exception.UnsupportedMediaTypeException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Unsupported media type&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="406">
+            <apikit:exception value="org.mule.module.apikit.exception.NotAcceptableException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Not acceptable&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="400">
+            <apikit:exception value="org.mule.module.apikit.exception.BadRequestException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Bad request&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+    </apikit:mapping-exception-strategy>
+</mule>

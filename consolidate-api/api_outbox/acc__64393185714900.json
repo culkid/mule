@@ -1,0 +1,30 @@
+[
+  {
+    "cid": 100000,
+    "customername": "Akbar",
+    "mobile": "1234567",
+    "email": "akbarmd@gmail.com",
+    "bank": "HDFC"
+  },
+  {
+    "cid": 100001,
+    "customername": "sita",
+    "mobile": "78787878",
+    "email": "sita@gmail.com",
+    "bank": "HDFC"
+  },
+  {
+    "cid": 100000,
+    "customername": "Rehaan",
+    "mobile": "90909090",
+    "email": "rehaan@gmail.com",
+    "bank": "Axis"
+  },
+  {
+    "cid": 100001,
+    "customername": "Sanaa",
+    "mobile": "80808080",
+    "email": "sanaa@gmail.com",
+    "bank": "Axis"
+  }
+]

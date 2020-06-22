@@ -1,0 +1,18 @@
+#%RAML 0.8
+title: usecase-3-xml-personal
+
+/personal: 
+  get: 
+    description: this fetches the personal details of a person
+    responses: 
+      200: 
+        body: 
+          application/xml:  
+            example:  
+              <personal>
+                <customerID>100</customerID>
+                <Name>Chinnu_Rowdy Baby</Name>
+                <Gender>Female</Gender>
+                <Phone>12345</Phone>
+                <Email>test@gmail.com</Email>
+              </personal>

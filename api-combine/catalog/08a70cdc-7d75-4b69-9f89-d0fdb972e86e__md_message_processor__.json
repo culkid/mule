@@ -1,0 +1,17 @@
+{
+    "inputMessageMetadata": {
+        "flowVariables": {
+            "customer-final": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "sample-json-data"
+            },
+            "json-final": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "expected-data"
+            }
+        }
+    },
+    "outputMessageMetadata": {},
+    "id": "08a70cdc-7d75-4b69-9f89-d0fdb972e86e",
+    "version": "5.2.0.0"
+}

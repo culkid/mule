@@ -1,0 +1,18 @@
+#%RAML 0.8
+title: august
+baseUri: http://localhost:8888/get
+/parameter: 
+  get: 
+    description: this is a sample project
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: |
+              [
+                {
+                  "name":"sankiran",
+                  "age":24,
+                  "gender":"female"
+                 }
+               ]

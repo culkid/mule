@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+    <http:listener-config xmlns:http="http://www.mulesoft.org/schema/mule/http" name="combine-usecases-httpListenerConfig" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
+    <apikit:config xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" name="combine-usecases-config" raml="combine-usecases.raml" consoleEnabled="false" doc:name="Router"/>
+    <flow name="combine-usecases-main">
+        <http:listener xmlns:http="http://www.mulesoft.org/schema/mule/http" config-ref="combine-usecases-httpListenerConfig" path="/api/*" doc:name="HTTP"/>
+        <apikit:router xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" config-ref="combine-usecases-config" doc:name="APIkit Router"/>
+        <exception-strategy ref="combine-usecases-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="combine-usecases-console">
+        <http:listener xmlns:http="http://www.mulesoft.org/schema/mule/http" config-ref="combine-usecases-httpListenerConfig" path="/console/*" doc:name="HTTP"/>
+        <apikit:console xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" config-ref="combine-usecases-config" doc:name="APIkit Console"/>
+    </flow>
+    <flow name="get:/account:combine-usecases-config">
+		<set-variable variableName="phone" value="#[message.inboundProperties.'http.query.params'.phone]" doc:name="Variable"/>
+		<choice doc:name="Choice">
+			<when expression="#[message.inboundProperties.'http.query.params'.phone == '12345']">
+				<set-payload value="{
+    &quot;Phone&quot;:12345,
+    &quot;Account Number&quot;:&quot;122222222&quot;,
+    &quot;Balance&quot;:100000.00,
+    &quot;Provider&quot;:&quot;HDFC Bank&quot;
+  }" doc:name="12345"/>
+			</when>
+			<when expression="#[message.inboundProperties.'http.query.params'.phone == '678910']">
+				<set-payload value="{
+    &quot;Phone&quot;:678910,
+    &quot;Account Number&quot;:&quot;45645645&quot;,
+    &quot;Balance&quot;:7851654.00,
+    &quot;Provider&quot;:&quot;SBI Bank&quot;
+  }" doc:name="678910"/>
+			</when>
+			<when expression="#[message.inboundProperties.'http.query.params'.phone == '111213']">
+				<set-payload value="{
+    &quot;Phone&quot;:111213,
+    &quot;Account Number&quot;:&quot;4251651&quot;,
+    &quot;Balance&quot;:556160.00,
+    &quot;Provider&quot;:&quot;Axis Bank&quot;
+  }" doc:name="111213"/>
+			</when>
+			<otherwise>
+				<set-payload value="error...enter the value again....." doc:name="Set Payload"/>
+			</otherwise>
+		</choice>
+
+    </flow>
+    <flow name="get:/social:combine-usecases-config">
+		<set-variable variableName="phone" value="#[message.inboundProperties.'http.query.params'.phone]" doc:name="Variable"/>
+		<choice doc:name="Choice">
+			<when expression="#[message.inboundProperties.'http.query.params'.phone == '12345']">
+				<set-payload value="{
+    &quot;Phone&quot;:12345,
+    &quot;Email&quot;:&quot;abc@gmail.com&quot;,
+    &quot;PAN&quot;:34SD34ER,
+    &quot;Aadhar&quot;:4578-4578-4578
+  }" doc:name="12345"/>
+			</when>
+			<when expression="#[message.inboundProperties.'http.query.params'.phone == '678910']">
+				<set-payload value="{
+    &quot;Phone&quot;:678910,
+    &quot;Email&quot;:&quot;apple@gmail.com&quot;,
+    &quot;PAN&quot;:6DG68FYH,
+    &quot;Aadhar&quot;:7845-7985-7845
+  }" doc:name="678910"/>
+			</when>
+			<when expression="#[message.inboundProperties.'http.query.params'.phone == '500']">
+				<set-payload value="{
+    &quot;Phone&quot;:500,
+    &quot;Email&quot;:&quot;orange@gmail.com&quot;,
+    &quot;PAN&quot;:854GHG65,
+    &quot;Aadhar&quot;:1234-1234-1234
+  }" doc:name="500"/>
+			</when>
+			<otherwise>
+				<set-payload value="error... please check the value again" doc:name="Set Payload"/>
+			</otherwise>
+		</choice>
+
+    </flow>
+    <flow name="get:/personal:combine-usecases-config">
+        <set-payload value="{&#xA;&quot;customerID&quot;:&quot;100&quot;,&#xA;&quot;Name&quot;:&quot;Prashanth&quot;,&#xA;&quot;Gender&quot;:&quot;Male&quot;,&#xA;&quot;Phone&quot;:&quot;12345&quot;,&#xA;&quot;Email&quot;:&quot;test@gmail.com&quot;&#xA;}" doc:name="Set Payload"/>
+    </flow>
+    <apikit:mapping-exception-strategy xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" name="combine-usecases-apiKitGlobalExceptionMapping">
+        <apikit:mapping statusCode="404">
+            <apikit:exception value="org.mule.module.apikit.exception.NotFoundException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Resource not found&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="405">
+            <apikit:exception value="org.mule.module.apikit.exception.MethodNotAllowedException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Method not allowed&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="415">
+            <apikit:exception value="org.mule.module.apikit.exception.UnsupportedMediaTypeException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Unsupported media type&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="406">
+            <apikit:exception value="org.mule.module.apikit.exception.NotAcceptableException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Not acceptable&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="400">
+            <apikit:exception value="org.mule.module.apikit.exception.BadRequestException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Bad request&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+    </apikit:mapping-exception-strategy>
+</mule>

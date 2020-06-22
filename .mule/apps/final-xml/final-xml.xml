@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+	<http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8008" basePath="xml" doc:name="HTTP Listener Configuration"/>
+	<http:request-config name="HTTP_Request_Configuration" host="localhost" port="8098" basePath="api" doc:name="HTTP Request Configuration"/>
+	<http:request-config name="HTTP_Request_Configuration1" host="localhost" port="8099" basePath="api" doc:name="HTTP Request Configuration"/>
+	<sub-flow name="account_flowarea">
+		<http:request config-ref="HTTP_Request_Configuration1" path="account" method="GET" doc:name="HTTP_Account"/>
+		<byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+		<set-variable variableName="account_var" value="#[payload]" doc:name="account_var"/>
+		<logger message="account logger #[payload]" level="INFO" doc:name="Logger"/>
+	</sub-flow>
+	<sub-flow name="personal_flowarea">
+		<http:request config-ref="HTTP_Request_Configuration" path="personal" method="GET" doc:name="HTTP_Personal"/>
+		<byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+		<set-variable variableName="personal_var" value="#[payload]" doc:name="personal_var"/>
+		<logger message="personal variable #[payload]" level="INFO" doc:name="Logger"/>
+		<flow-ref name="account_flowarea" doc:name="Flow Reference"/>
+	</sub-flow>
+	<flow name="final-xmlFlow">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/output" allowedMethods="GET" doc:name="HTTP"/>
+		<byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+		<flow-ref name="personal_flowarea" doc:name="Flow Reference"/>
+		<dw:transform-message doc:name="Transform Message" metadata:id="7dc19efd-30c9-4e01-adb8-0a15fd7c094b">
+			<dw:input-payload doc:sample="C:\Users\dell\Desktop\456\expected-xml\sample-personal.xml"/>
+			<dw:input-variable mimeType="application/xml" variableName="account_var"/>
+			<dw:input-variable doc:sample="C:\Users\dell\Desktop\456\expected-xml\actual-personal.xml" mimeType="application/xml" variableName="personal_var"/>
+			<dw:input-variable mimeType="application/xml" variableName="sample-personal"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%function getaccountdetails(Phone)
+{
+	(flowVars.account_var)
+}
+%output application/xml
+---
+{
+	(flowVars.personal_var map (val,index) ->{
+	personal: {
+		customerID: val.customerID,
+		Name: val.Name,
+		Gender: val.Gender,
+		account: getaccountdetails(payload.Phone)-'Phone'-'Provider'
+	}
+})
+}]]></dw:set-payload>
+		</dw:transform-message>
+		<logger message="after transform................ #[payload]" level="INFO" doc:name="Logger"/>
+	</flow>
+</mule>

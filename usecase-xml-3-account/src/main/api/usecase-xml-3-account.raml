@@ -1,0 +1,18 @@
+#%RAML 0.8
+title: usecase-xml-3-account
+version: 1.0
+
+/account:
+  get: 
+     
+    responses: 
+      200: 
+        body: 
+          application/xml:  
+            example:
+              <account>
+                <Phone>12345</Phone>
+                <Account_Number>122222222</Account_Number>
+                <Balance>100000</Balance>
+                <Provider>HDFC Bank</Provider>
+              </account>

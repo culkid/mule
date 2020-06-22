@@ -1,0 +1,471 @@
+2020-06-20 20:48:00,981 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'combine-usecases'                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 20:48:01,450 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-20 20:48:01,638 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-20 20:48:01,816 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-20 20:48:01,816 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-20 20:48:02,097 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Sat Jun 20 20:48:02 IST 2020]; root of context hierarchy
+2020-06-20 20:48:03,565 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-20 20:48:05,062 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-20 20:48:05,444 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx2.log
+2020-06-20 20:48:05,459 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx2.log
+2020-06-20 20:48:05,615 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-20 20:48:05,631 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-main
+2020-06-20 20:48:05,631 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-20 20:48:05,631 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-20 20:48:05,631 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-20 20:48:05,631 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-20 20:48:05,631 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-20 20:48:05,959 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-main.stage1
+2020-06-20 20:48:05,975 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-console
+2020-06-20 20:48:05,975 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@687e6293
+2020-06-20 20:48:05,975 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-console.stage1
+2020-06-20 20:48:05,990 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/account:combine-usecases-config
+2020-06-20 20:48:05,990 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@787508ca
+2020-06-20 20:48:06,006 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/account:combine-usecases-config.stage1
+2020-06-20 20:48:06,006 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/social:combine-usecases-config
+2020-06-20 20:48:06,006 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@70721c12
+2020-06-20 20:48:06,006 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/social:combine-usecases-config.stage1
+2020-06-20 20:48:06,006 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/personal:combine-usecases-config
+2020-06-20 20:48:06,006 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@93824eb
+2020-06-20 20:48:06,021 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/personal:combine-usecases-config.stage1
+2020-06-20 20:48:07,099 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-20 20:48:07,572 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 20:48:07,572 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 20:48:07,587 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-20 20:48:07,587 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'combine-usecases'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 20:48:07,603 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-20 20:48:07,603 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-20 20:48:07,712 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-20 20:48:07,712 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-20 20:48:07,728 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-main
+2020-06-20 20:48:07,728 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-main.stage1
+2020-06-20 20:48:07,744 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2020-06-20 20:48:07,744 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-console
+2020-06-20 20:48:07,744 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-console.stage1
+2020-06-20 20:48:07,759 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/account:combine-usecases-config
+2020-06-20 20:48:07,759 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/account:combine-usecases-config.stage1
+2020-06-20 20:48:07,759 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/social:combine-usecases-config
+2020-06-20 20:48:07,759 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/social:combine-usecases-config.stage1
+2020-06-20 20:48:07,759 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/personal:combine-usecases-config
+2020-06-20 20:48:07,759 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/personal:combine-usecases-config.stage1
+2020-06-20 20:48:07,822 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-20 20:48:07,900 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: combine-usecases                                      *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-20 20:56:15,507 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'combine-usecases'                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 20:56:15,851 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-20 20:56:15,976 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-20 20:56:16,101 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-20 20:56:16,101 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-20 20:56:16,335 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Sat Jun 20 20:56:16 IST 2020]; root of context hierarchy
+2020-06-20 20:56:17,670 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-20 20:56:19,026 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-20 20:56:19,391 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx2.log
+2020-06-20 20:56:19,422 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx2.log
+2020-06-20 20:56:19,578 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-20 20:56:19,578 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-main
+2020-06-20 20:56:19,578 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-20 20:56:19,578 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-20 20:56:19,578 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-20 20:56:19,578 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-20 20:56:19,578 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-20 20:56:19,875 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-main.stage1
+2020-06-20 20:56:19,891 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-console
+2020-06-20 20:56:19,891 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@60e06f7d
+2020-06-20 20:56:19,891 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-console.stage1
+2020-06-20 20:56:19,891 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/account:combine-usecases-config
+2020-06-20 20:56:19,891 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5d0b0cb9
+2020-06-20 20:56:19,906 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/account:combine-usecases-config.stage1
+2020-06-20 20:56:19,906 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/social:combine-usecases-config
+2020-06-20 20:56:19,906 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1d858300
+2020-06-20 20:56:19,906 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/social:combine-usecases-config.stage1
+2020-06-20 20:56:19,906 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/personal:combine-usecases-config
+2020-06-20 20:56:19,906 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@71cea1b8
+2020-06-20 20:56:19,922 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/personal:combine-usecases-config.stage1
+2020-06-20 20:56:20,609 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-20 20:56:20,846 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 20:56:20,846 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 20:56:20,862 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-20 20:56:20,862 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'combine-usecases'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 20:56:20,877 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-20 20:56:20,877 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-20 20:56:20,924 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-20 20:56:20,924 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-20 20:56:20,924 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-main
+2020-06-20 20:56:20,940 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-main.stage1
+2020-06-20 20:56:20,955 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2020-06-20 20:56:20,955 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-console
+2020-06-20 20:56:20,955 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-console.stage1
+2020-06-20 20:56:20,955 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/account:combine-usecases-config
+2020-06-20 20:56:20,955 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/account:combine-usecases-config.stage1
+2020-06-20 20:56:20,971 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/social:combine-usecases-config
+2020-06-20 20:56:20,971 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/social:combine-usecases-config.stage1
+2020-06-20 20:56:20,971 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/personal:combine-usecases-config
+2020-06-20 20:56:20,971 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/personal:combine-usecases-config.stage1
+2020-06-20 20:56:21,033 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-20 20:56:21,080 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: combine-usecases                                      *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-20 20:59:04,074 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'combine-usecases'                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 20:59:04,433 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-20 20:59:04,574 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-20 20:59:04,715 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-20 20:59:04,715 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-20 20:59:04,967 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Sat Jun 20 20:59:04 IST 2020]; root of context hierarchy
+2020-06-20 20:59:06,498 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-20 20:59:18,784 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'combine-usecases'                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 20:59:19,148 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-20 20:59:19,304 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-20 20:59:19,429 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-20 20:59:19,429 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-20 20:59:19,679 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Sat Jun 20 20:59:19 IST 2020]; root of context hierarchy
+2020-06-20 20:59:21,114 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-20 20:59:22,534 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-20 20:59:22,885 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx2.log
+2020-06-20 20:59:22,916 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx2.log
+2020-06-20 20:59:23,088 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-20 20:59:23,088 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-main
+2020-06-20 20:59:23,088 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-20 20:59:23,088 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-20 20:59:23,088 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-20 20:59:23,088 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-20 20:59:23,088 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-20 20:59:23,416 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-main.stage1
+2020-06-20 20:59:23,431 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-console
+2020-06-20 20:59:23,431 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@60e06f7d
+2020-06-20 20:59:23,431 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-console.stage1
+2020-06-20 20:59:23,431 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/account:combine-usecases-config
+2020-06-20 20:59:23,431 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5d0b0cb9
+2020-06-20 20:59:23,447 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/account:combine-usecases-config.stage1
+2020-06-20 20:59:23,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/social:combine-usecases-config
+2020-06-20 20:59:23,447 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1d858300
+2020-06-20 20:59:23,447 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/social:combine-usecases-config.stage1
+2020-06-20 20:59:23,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/personal:combine-usecases-config
+2020-06-20 20:59:23,463 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@71cea1b8
+2020-06-20 20:59:23,463 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/personal:combine-usecases-config.stage1
+2020-06-20 20:59:24,103 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-20 20:59:24,337 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 20:59:24,337 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 20:59:24,337 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-20 20:59:24,337 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'combine-usecases'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 20:59:24,353 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-20 20:59:24,353 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-20 20:59:24,400 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-20 20:59:24,415 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-20 20:59:24,415 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-main
+2020-06-20 20:59:24,415 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-main.stage1
+2020-06-20 20:59:24,431 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2020-06-20 20:59:24,431 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-console
+2020-06-20 20:59:24,431 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-console.stage1
+2020-06-20 20:59:24,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/account:combine-usecases-config
+2020-06-20 20:59:24,447 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/account:combine-usecases-config.stage1
+2020-06-20 20:59:24,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/social:combine-usecases-config
+2020-06-20 20:59:24,447 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/social:combine-usecases-config.stage1
+2020-06-20 20:59:24,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/personal:combine-usecases-config
+2020-06-20 20:59:24,447 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/personal:combine-usecases-config.stage1
+2020-06-20 20:59:24,525 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-20 20:59:24,556 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: combine-usecases                                      *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-20 21:33:57,052 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'combine-usecases'                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 21:33:57,396 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-20 21:33:57,505 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-20 21:33:57,646 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-20 21:33:57,646 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-20 21:33:57,896 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Sat Jun 20 21:33:57 IST 2020]; root of context hierarchy
+2020-06-20 21:33:59,273 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-20 21:34:00,629 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-20 21:34:00,931 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx2.log
+2020-06-20 21:34:00,947 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx2.log
+2020-06-20 21:34:01,103 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-20 21:34:01,103 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-main
+2020-06-20 21:34:01,103 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-20 21:34:01,103 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-20 21:34:01,103 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-20 21:34:01,119 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-20 21:34:01,119 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-20 21:34:01,150 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-main.stage1
+2020-06-20 21:34:01,166 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-console
+2020-06-20 21:34:01,166 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@60e06f7d
+2020-06-20 21:34:01,181 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-console.stage1
+2020-06-20 21:34:01,181 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/account:combine-usecases-config
+2020-06-20 21:34:01,181 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5d0b0cb9
+2020-06-20 21:34:01,197 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/account:combine-usecases-config.stage1
+2020-06-20 21:34:01,197 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/social:combine-usecases-config
+2020-06-20 21:34:01,197 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1d858300
+2020-06-20 21:34:01,463 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/social:combine-usecases-config.stage1
+2020-06-20 21:34:01,478 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/personal:combine-usecases-config
+2020-06-20 21:34:01,478 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@71cea1b8
+2020-06-20 21:34:01,478 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/personal:combine-usecases-config.stage1
+2020-06-20 21:34:02,103 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-20 21:34:02,318 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 21:34:02,318 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 21:34:02,318 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-20 21:34:02,318 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'combine-usecases'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 21:34:02,333 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-20 21:34:02,333 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-20 21:34:02,380 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-20 21:34:02,380 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-20 21:34:02,380 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-main
+2020-06-20 21:34:02,380 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-main.stage1
+2020-06-20 21:34:02,396 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2020-06-20 21:34:02,396 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-console
+2020-06-20 21:34:02,396 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-console.stage1
+2020-06-20 21:34:02,411 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/account:combine-usecases-config
+2020-06-20 21:34:02,411 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/account:combine-usecases-config.stage1
+2020-06-20 21:34:02,411 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/social:combine-usecases-config
+2020-06-20 21:34:02,411 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/social:combine-usecases-config.stage1
+2020-06-20 21:34:02,427 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/personal:combine-usecases-config
+2020-06-20 21:34:02,427 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/personal:combine-usecases-config.stage1
+2020-06-20 21:34:02,474 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-20 21:34:02,505 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: combine-usecases                                      *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-20 21:34:04,239 [[combine-usecases].combine-usecases-httpListenerConfig.worker.01] WARN  org.mule.config.spring.SpringRegistry - Spring registry already contains an object named 'threadpool.[combine-usecases].throttling-task'. The previous object will be overwritten.
+2020-06-20 21:39:12,484 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'combine-usecases'                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 21:39:12,797 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-20 21:39:12,922 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-20 21:39:13,062 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-20 21:39:13,062 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-20 21:39:13,297 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Sat Jun 20 21:39:13 IST 2020]; root of context hierarchy
+2020-06-20 21:39:14,655 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-20 21:39:16,000 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-20 21:39:16,398 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx2.log
+2020-06-20 21:39:16,429 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx2.log
+2020-06-20 21:39:16,601 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-20 21:39:16,601 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-main
+2020-06-20 21:39:16,601 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-20 21:39:16,601 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-20 21:39:16,601 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-20 21:39:16,601 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-20 21:39:16,601 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-20 21:39:16,757 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-main.stage1
+2020-06-20 21:39:16,788 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-console
+2020-06-20 21:39:16,788 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@60e06f7d
+2020-06-20 21:39:16,788 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-console.stage1
+2020-06-20 21:39:16,804 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/account:combine-usecases-config
+2020-06-20 21:39:16,804 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5d0b0cb9
+2020-06-20 21:39:16,804 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/account:combine-usecases-config.stage1
+2020-06-20 21:39:16,804 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/social:combine-usecases-config
+2020-06-20 21:39:16,804 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1d858300
+2020-06-20 21:39:16,819 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/social:combine-usecases-config.stage1
+2020-06-20 21:39:16,819 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/personal:combine-usecases-config
+2020-06-20 21:39:16,819 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@71cea1b8
+2020-06-20 21:39:16,819 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/personal:combine-usecases-config.stage1
+2020-06-20 21:39:17,444 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-20 21:39:17,667 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 21:39:17,667 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 21:39:17,682 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-20 21:39:17,682 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'combine-usecases'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 21:39:17,682 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-20 21:39:17,682 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-20 21:39:17,729 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-20 21:39:17,745 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-20 21:39:17,745 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-main
+2020-06-20 21:39:17,745 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-main.stage1
+2020-06-20 21:39:17,745 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2020-06-20 21:39:17,745 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-console
+2020-06-20 21:39:17,745 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-console.stage1
+2020-06-20 21:39:17,760 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/account:combine-usecases-config
+2020-06-20 21:39:17,760 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/account:combine-usecases-config.stage1
+2020-06-20 21:39:17,760 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/social:combine-usecases-config
+2020-06-20 21:39:17,760 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/social:combine-usecases-config.stage1
+2020-06-20 21:39:17,760 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/personal:combine-usecases-config
+2020-06-20 21:39:17,760 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/personal:combine-usecases-config.stage1
+2020-06-20 21:39:17,823 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-20 21:39:18,916 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: combine-usecases                                      *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-20 21:39:19,651 [[combine-usecases].combine-usecases-httpListenerConfig.worker.02] WARN  org.mule.config.spring.SpringRegistry - Spring registry already contains an object named 'threadpool.[combine-usecases].throttling-task'. The previous object will be overwritten.
+2020-06-20 21:40:32,373 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'combine-usecases'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 21:40:32,373 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: combine-usecases-main
+2020-06-20 21:40:32,373 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: combine-usecases-main.stage1
+2020-06-20 21:40:32,420 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: combine-usecases-console
+2020-06-20 21:40:32,420 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: combine-usecases-console.stage1
+2020-06-20 21:40:32,623 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/account:combine-usecases-config
+2020-06-20 21:40:32,623 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/account:combine-usecases-config.stage1
+2020-06-20 21:40:32,826 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/social:combine-usecases-config
+2020-06-20 21:40:32,826 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/social:combine-usecases-config.stage1
+2020-06-20 21:40:32,967 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/personal:combine-usecases-config
+2020-06-20 21:40:32,967 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/personal:combine-usecases-config.stage1
+2020-06-20 21:40:33,029 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-20 21:40:33,029 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081
+2020-06-20 21:40:33,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-20 21:40:33,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-20 21:40:33,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'combine-usecases'                         +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 21:40:33,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-20 21:40:33,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: combine-usecases-main
+2020-06-20 21:40:33,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: combine-usecases-main.stage1
+2020-06-20 21:40:33,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: combine-usecases-console
+2020-06-20 21:40:33,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: combine-usecases-console.stage1
+2020-06-20 21:40:33,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/account:combine-usecases-config
+2020-06-20 21:40:33,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/account:combine-usecases-config.stage1
+2020-06-20 21:40:33,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/social:combine-usecases-config
+2020-06-20 21:40:33,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/social:combine-usecases-config.stage1
+2020-06-20 21:40:33,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/personal:combine-usecases-config
+2020-06-20 21:40:33,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/personal:combine-usecases-config.stage1
+2020-06-20 21:40:33,060 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-20 21:40:33,092 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@1b0a7baf: startup date [Sat Jun 20 21:39:13 IST 2020]; root of context hierarchy
+2020-06-20 21:40:33,092 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "combine-usecases" shut down normally on: 20/6/20      *
+* 9:40 PM                                                            *
+* Up for: 0 days, 0 hours, 1 mins, 15.410 sec                        *
+**********************************************************************
+2020-06-20 21:40:33,154 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'combine-usecases'                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 21:40:33,170 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-20 21:40:33,170 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-20 21:40:33,185 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-20 21:40:33,185 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-20 21:40:33,185 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3a31b810: startup date [Sat Jun 20 21:40:33 IST 2020]; root of context hierarchy
+2020-06-20 21:40:33,404 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-20 21:40:33,534 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-tx-log\tx2.log
+2020-06-20 21:40:33,534 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\combine-usecases\queue-xa-tx-log\tx2.log
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-main
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-main.stage1
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: combine-usecases-console
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7643e8f3
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: combine-usecases-console.stage1
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/account:combine-usecases-config
+2020-06-20 21:40:33,550 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@511df4b7
+2020-06-20 21:40:33,566 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/account:combine-usecases-config.stage1
+2020-06-20 21:40:33,566 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/social:combine-usecases-config
+2020-06-20 21:40:33,566 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7b4c9315
+2020-06-20 21:40:33,566 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/social:combine-usecases-config.stage1
+2020-06-20 21:40:33,566 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/personal:combine-usecases-config
+2020-06-20 21:40:33,566 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@71142544
+2020-06-20 21:40:33,581 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/personal:combine-usecases-config.stage1
+2020-06-20 21:40:33,612 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-20 21:40:33,628 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 21:40:33,628 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\combine-usecases\combine-usecases.xml'}]"
+2020-06-20 21:40:33,628 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'combine-usecases'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-20 21:40:33,644 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-20 21:40:33,644 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-20 21:40:33,644 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-20 21:40:33,659 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-20 21:40:33,659 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-main
+2020-06-20 21:40:33,659 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-main.stage1
+2020-06-20 21:40:33,659 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2020-06-20 21:40:33,675 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: combine-usecases-console
+2020-06-20 21:40:33,675 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: combine-usecases-console.stage1
+2020-06-20 21:40:33,675 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/account:combine-usecases-config
+2020-06-20 21:40:33,675 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/account:combine-usecases-config.stage1
+2020-06-20 21:40:33,675 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/social:combine-usecases-config
+2020-06-20 21:40:33,690 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/social:combine-usecases-config.stage1
+2020-06-20 21:40:33,690 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/personal:combine-usecases-config
+2020-06-20 21:40:33,690 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/personal:combine-usecases-config.stage1
+2020-06-20 21:40:33,706 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-20 21:40:33,706 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: combine-usecases                                      *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:api-platform-gw="http://www.mulesoft.org/schema/mule/api-platform-gw" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd
+http://www.mulesoft.org/schema/mule/api-platform-gw http://www.mulesoft.org/schema/mule/api-platform-gw/current/mule-api-platform-gw.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+	<http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" basePath="combine" doc:name="HTTP Listener Configuration"/>
+	<smtp:gmail-connector name="Gmail" validateConnections="true" doc:name="Gmail"/>
+	<http:request-config name="HTTP_Request_Configuration" host="localhost" port="8082" basePath="api" doc:name="HTTP Request Configuration"/>
+	<http:request-config name="HTTP_Request_Configuration1" host="localhost" port="7777" basePath="api" doc:name="HTTP Request Configuration"/>
+	<http:request-config name="HTTP_Request_Configuration2" host="localhost" port="8888" basePath="api" doc:name="HTTP Request Configuration"/>
+	<api-platform-gw:api apiName="groupId:8aeb01c3-8992-46d5-9c84-c64d00feb2f1:assetId:usecase" version="v1:16216198" flowRef="main_flow" create="true" doc:name="API Autodiscovery"/>
+	<sub-flow name="social_area">
+		<http:request config-ref="HTTP_Request_Configuration2" path="social" method="GET" doc:name="HTTP"/>
+		<byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+		<set-variable variableName="social_data" value="#[payload]" doc:name="social_data"/>
+		<logger message="social_data........... #[flowVars.social_data]" level="INFO" doc:name="Logger"/>
+	</sub-flow>
+	<sub-flow name="account_area">
+		<http:request config-ref="HTTP_Request_Configuration1" path="account" method="GET" doc:name="HTTP"/>
+		<byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+		<set-variable variableName="account_data" value="#[payload]" doc:name="account_data"/>
+		<logger message="accounts data........... #[flowVars.account_data]" level="INFO" doc:name="Logger"/>
+		<flow-ref name="social_area" doc:name="social_area"/>
+	</sub-flow>
+	<sub-flow name="personal_area">
+		<http:request config-ref="HTTP_Request_Configuration" path="personal" method="GET" doc:name="HTTP"/>
+		<byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+		<set-variable variableName="personal_data" value="#[payload]" doc:name="personal_data"/>
+		<logger message="personal data.... #[flowVars.personal_data]" level="INFO" doc:name="Logger"/>
+		<flow-ref name="account_area" doc:name="account_area"/>
+	</sub-flow>
+	<flow name="main_flow">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/api" allowedMethods="GET" doc:name="HTTP"/>
+		<flow-ref name="personal_area" doc:name="personal_area"/>
+		<dw:transform-message doc:name="Transform Message" metadata:id="6c4951a8-a6e4-4b46-9ed5-84f359835e07">
+			<dw:input-variable doc:sample="C:\Users\dell\Desktop\456\sample-personal.json" mimeType="application/json" variableName="personal_sample"/>
+			<dw:input-variable doc:sample="C:\Users\dell\Desktop\456\expected-personal-json.json" mimeType="application/json" variableName="personal_data"/>
+			<dw:input-variable doc:sample="C:\Users\dell\Desktop\456\expected-account-json.json" mimeType="application/json" variableName="account_data"/>
+			<dw:input-variable doc:sample="C:\Users\dell\Desktop\456\expected-social-json.json" mimeType="application/json" variableName="social_data"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%function getaccountdetails(Phone)
+{
+	(flowVars.account_data[?($.Phone==Phone)] default {})
+}
+%function getsocialdetails(Phone)
+{
+	(flowVars.social_data[?($.Phone==Phone)] default {})
+}
+
+%output application/json
+---
+flowVars.personal_data map (val,index) -> {
+	customerID:val.customerID,
+	Name:val.Name,
+	Gender:val.Gender,
+	Phone:val.Phone,
+	Email:val.Email,
+	account:getaccountdetails(val.Phone),
+	social:getsocialdetails(val.Phone)-'Phone'-'Email'
+}]]></dw:set-payload>
+		</dw:transform-message>
+		<logger message="after transform message #[payload]" level="INFO" doc:name="Logger"/>
+		<catch-exception-strategy doc:name="Catch Exception Strategy">
+			<set-payload value="error in flow....please check again" doc:name="Set Payload"/>
+			<smtp:outbound-endpoint host="smtp.gmail.com" port="587" user="culkid26@gmail.com" password="Sanki@123C" connector-ref="Gmail" to="curr.gk@gmail.com" from="culkid26@gmail.com" subject="Message...Alertttttttt" responseTimeout="10000" doc:name="SMTP"/>
+		</catch-exception-strategy>
+	</flow>
+</mule>

@@ -1,184 +1,72 @@
-INFO  2020-06-15 11:05:22,025 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 00:38:50,790 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 11:05:22,026 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 00:38:50,792 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:06:45,360 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 01:10:30,896 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:06:45,360 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 01:10:30,897 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:09:18,318 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 12:42:30,280 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:09:18,319 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 12:42:30,280 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:12:01,091 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 12:46:44,132 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:12:01,091 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 12:46:44,133 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:14:02,491 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 12:50:23,463 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:14:02,494 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 12:50:23,465 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:17:15,465 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 12:51:29,687 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:17:15,466 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 12:51:29,689 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:19:10,646 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 12:57:44,916 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:19:10,647 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 12:57:44,916 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:21:25,732 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 13:32:32,798 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:21:25,734 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 13:32:32,799 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:23:52,467 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 13:34:44,482 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:23:52,467 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:25:31,658 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:25:31,660 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:26:55,621 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:26:55,622 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:52:20,800 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 13:52:20,801 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:02:09,549 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:02:09,550 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:04:34,594 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:04:34,596 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:10:04,658 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:10:04,659 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:14:32,902 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:14:32,903 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:18:05,388 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:18:05,389 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:20:21,365 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:20:21,365 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:21:03,759 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:21:03,760 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:21:45,012 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:21:45,013 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:22:12,963 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:22:12,966 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:24:32,878 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:24:32,879 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ Initializing domain 'default'                            +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:25:44,265 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ New domain 'default'                                     +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2020-06-15 14:25:44,266 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2020-06-22 13:34:44,483 [main] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

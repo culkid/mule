@@ -1,0 +1,537 @@
+2020-06-19 00:35:44,318 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'june'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:35:44,690 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-19 00:35:44,849 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-19 00:35:44,977 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-19 00:35:44,977 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-19 00:35:45,254 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@46c670a6: startup date [Fri Jun 19 00:35:45 IST 2020]; root of context hierarchy
+2020-06-19 00:35:46,943 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-19 00:35:48,553 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2020-06-19 00:35:49,009 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\june\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\june\queue-tx-log\tx2.log
+2020-06-19 00:35:49,253 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\june\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\june\queue-xa-tx-log\tx2.log
+2020-06-19 00:35:49,443 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-19 00:35:49,449 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: filesample-main
+2020-06-19 00:35:49,451 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-19 00:35:49,458 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-19 00:35:49,458 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-19 00:35:49,458 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-19 00:35:49,460 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-19 00:35:49,501 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: filesample-main.stage1
+2020-06-19 00:35:49,518 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: filesample-console
+2020-06-19 00:35:49,518 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@479ac2cb
+2020-06-19 00:35:49,532 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: filesample-console.stage1
+2020-06-19 00:35:49,537 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/kit:filesample-config
+2020-06-19 00:35:49,538 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1c52552f
+2020-06-19 00:35:49,544 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/kit:filesample-config.stage1
+2020-06-19 00:35:50,549 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-19 00:35:50,653 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\filesample.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\june.xml'}]"
+2020-06-19 00:35:50,653 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\filesample.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\june.xml'}]"
+2020-06-19 00:35:50,660 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2020-06-19 00:35:50,666 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'june'                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:35:50,697 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-19 00:35:50,697 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-19 00:35:50,761 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-19 00:35:50,768 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-19 00:35:50,770 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: filesample-main
+2020-06-19 00:35:50,772 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: filesample-main.stage1
+2020-06-19 00:35:50,789 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2020-06-19 00:35:50,789 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: filesample-console
+2020-06-19 00:35:50,789 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: filesample-console.stage1
+2020-06-19 00:35:50,811 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/kit:filesample-config
+2020-06-19 00:35:50,826 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/kit:filesample-config.stage1
+2020-06-19 00:35:50,901 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-19 00:35:51,006 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: june                                                  *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-19 00:44:01,436 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'june'                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:44:01,438 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: filesample-main
+2020-06-19 00:44:01,439 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: filesample-main.stage1
+2020-06-19 00:44:01,459 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: filesample-console
+2020-06-19 00:44:01,460 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: filesample-console.stage1
+2020-06-19 00:44:01,567 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/kit:filesample-config
+2020-06-19 00:44:01,567 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/kit:filesample-config.stage1
+2020-06-19 00:44:01,586 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-19 00:44:01,599 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081
+2020-06-19 00:44:01,602 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-19 00:44:01,602 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-19 00:44:01,611 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'june'                                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:44:01,612 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-19 00:44:01,614 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: filesample-main
+2020-06-19 00:44:01,614 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: filesample-main.stage1
+2020-06-19 00:44:01,615 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: filesample-console
+2020-06-19 00:44:01,615 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: filesample-console.stage1
+2020-06-19 00:44:01,616 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/kit:filesample-config
+2020-06-19 00:44:01,617 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/kit:filesample-config.stage1
+2020-06-19 00:44:01,621 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-19 00:44:01,766 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@46c670a6: startup date [Fri Jun 19 00:35:45 IST 2020]; root of context hierarchy
+2020-06-19 00:44:01,771 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "june" shut down normally on: 19/6/20 12:44 AM         *
+* Up for: 0 days, 0 hours, 8 mins, 11.101 sec                        *
+**********************************************************************
+2020-06-19 00:44:01,957 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'june'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:44:01,964 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-19 00:44:01,968 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-19 00:44:01,981 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-19 00:44:01,981 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-19 00:44:01,984 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@1c58ad63: startup date [Fri Jun 19 00:44:01 IST 2020]; root of context hierarchy
+2020-06-19 00:44:02,363 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-19 00:44:02,576 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\june\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\june\queue-tx-log\tx2.log
+2020-06-19 00:44:02,579 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\june\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\june\queue-xa-tx-log\tx2.log
+2020-06-19 00:44:02,591 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-19 00:44:02,593 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: filesample-main
+2020-06-19 00:44:02,594 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-19 00:44:02,596 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-19 00:44:02,596 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-19 00:44:02,596 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-19 00:44:02,598 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-19 00:44:02,607 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: filesample-main.stage1
+2020-06-19 00:44:02,609 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: filesample-console
+2020-06-19 00:44:02,610 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5701ef15
+2020-06-19 00:44:02,619 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: filesample-console.stage1
+2020-06-19 00:44:02,622 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/kit:filesample-config
+2020-06-19 00:44:02,622 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@59712a3b
+2020-06-19 00:44:02,631 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/kit:filesample-config.stage1
+2020-06-19 00:44:02,670 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-19 00:44:02,702 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\filesample.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\june.xml'}]"
+2020-06-19 00:44:02,702 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\filesample.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\june.xml'}]"
+2020-06-19 00:44:02,706 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'june'                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:44:02,724 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-19 00:44:02,725 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-19 00:44:02,740 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8888
+2020-06-19 00:44:02,745 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-19 00:44:02,746 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: filesample-main
+2020-06-19 00:44:02,746 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: filesample-main.stage1
+2020-06-19 00:44:02,758 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8888/console                            *
+********************************************************************************
+2020-06-19 00:44:02,759 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: filesample-console
+2020-06-19 00:44:02,760 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: filesample-console.stage1
+2020-06-19 00:44:02,769 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/kit:filesample-config
+2020-06-19 00:44:02,772 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/kit:filesample-config.stage1
+2020-06-19 00:44:02,782 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-19 00:44:02,786 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: june                                                  *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-19 00:44:42,818 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'june'                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:44:42,819 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: filesample-main
+2020-06-19 00:44:42,819 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: filesample-main.stage1
+2020-06-19 00:44:42,852 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: filesample-console
+2020-06-19 00:44:42,852 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: filesample-console.stage1
+2020-06-19 00:44:42,861 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/kit:filesample-config
+2020-06-19 00:44:42,861 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/kit:filesample-config.stage1
+2020-06-19 00:44:42,970 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-19 00:44:42,977 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8888
+2020-06-19 00:44:42,980 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-19 00:44:42,980 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-19 00:44:42,986 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'june'                                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:44:42,986 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-19 00:44:42,987 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: filesample-main
+2020-06-19 00:44:42,988 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: filesample-main.stage1
+2020-06-19 00:44:42,989 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: filesample-console
+2020-06-19 00:44:42,989 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: filesample-console.stage1
+2020-06-19 00:44:42,989 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/kit:filesample-config
+2020-06-19 00:44:42,989 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/kit:filesample-config.stage1
+2020-06-19 00:44:42,993 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-19 00:44:43,021 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@1c58ad63: startup date [Fri Jun 19 00:44:01 IST 2020]; root of context hierarchy
+2020-06-19 00:44:43,034 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "june" shut down normally on: 19/6/20 12:44 AM         *
+* Up for: 0 days, 0 hours, 0 mins, 40.325 sec                        *
+**********************************************************************
+2020-06-19 00:44:43,165 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'june'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:44:43,176 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-19 00:44:43,184 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-19 00:44:43,201 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-19 00:44:43,202 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-19 00:44:43,206 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3f85c200: startup date [Fri Jun 19 00:44:43 IST 2020]; root of context hierarchy
+2020-06-19 00:44:43,501 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-19 00:44:43,650 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\june\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\june\queue-tx-log\tx2.log
+2020-06-19 00:44:43,651 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\june\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\june\queue-xa-tx-log\tx2.log
+2020-06-19 00:44:43,662 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-19 00:44:43,664 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: filesample-main
+2020-06-19 00:44:43,665 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-19 00:44:43,665 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-19 00:44:43,665 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-19 00:44:43,666 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-19 00:44:43,666 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-19 00:44:43,673 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: filesample-main.stage1
+2020-06-19 00:44:43,674 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: filesample-console
+2020-06-19 00:44:43,674 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fb23434
+2020-06-19 00:44:43,679 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: filesample-console.stage1
+2020-06-19 00:44:43,681 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/kit:filesample-config
+2020-06-19 00:44:43,681 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@358577d3
+2020-06-19 00:44:43,687 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/kit:filesample-config.stage1
+2020-06-19 00:44:43,718 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-19 00:44:43,740 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\filesample.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\june.xml'}]"
+2020-06-19 00:44:43,740 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\filesample.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\june.xml'}]"
+2020-06-19 00:44:43,742 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'june'                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:44:43,745 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-19 00:44:43,745 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-19 00:44:43,757 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-19 00:44:43,763 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-19 00:44:43,765 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: filesample-main
+2020-06-19 00:44:43,765 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: filesample-main.stage1
+2020-06-19 00:44:43,772 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2020-06-19 00:44:43,772 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: filesample-console
+2020-06-19 00:44:43,772 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: filesample-console.stage1
+2020-06-19 00:44:43,780 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/kit:filesample-config
+2020-06-19 00:44:43,781 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/kit:filesample-config.stage1
+2020-06-19 00:44:43,792 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-19 00:44:43,799 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: june                                                  *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-19 00:45:23,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'june'                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:45:23,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: filesample-main
+2020-06-19 00:45:23,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: filesample-main.stage1
+2020-06-19 00:45:23,875 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: filesample-console
+2020-06-19 00:45:23,875 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: filesample-console.stage1
+2020-06-19 00:45:24,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/kit:filesample-config
+2020-06-19 00:45:24,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/kit:filesample-config.stage1
+2020-06-19 00:45:24,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-19 00:45:24,111 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081
+2020-06-19 00:45:24,115 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-19 00:45:24,115 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-19 00:45:24,123 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'june'                                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:45:24,123 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-19 00:45:24,126 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: filesample-main
+2020-06-19 00:45:24,126 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: filesample-main.stage1
+2020-06-19 00:45:24,127 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: filesample-console
+2020-06-19 00:45:24,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: filesample-console.stage1
+2020-06-19 00:45:24,129 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/kit:filesample-config
+2020-06-19 00:45:24,131 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/kit:filesample-config.stage1
+2020-06-19 00:45:24,140 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-19 00:45:24,160 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@3f85c200: startup date [Fri Jun 19 00:44:43 IST 2020]; root of context hierarchy
+2020-06-19 00:45:24,173 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "june" shut down normally on: 19/6/20 12:45 AM         *
+* Up for: 0 days, 0 hours, 0 mins, 40.430 sec                        *
+**********************************************************************
+2020-06-19 00:45:24,281 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'june'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:45:24,289 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-19 00:45:24,293 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-19 00:45:24,309 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-19 00:45:24,310 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-19 00:45:24,314 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@2addc0f6: startup date [Fri Jun 19 00:45:24 IST 2020]; root of context hierarchy
+2020-06-19 00:45:24,644 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-19 00:45:24,953 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\june\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\june\queue-tx-log\tx2.log
+2020-06-19 00:45:24,956 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\june\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\june\queue-xa-tx-log\tx2.log
+2020-06-19 00:45:24,968 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-19 00:45:24,970 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: filesample-main
+2020-06-19 00:45:24,971 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-19 00:45:24,973 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-19 00:45:24,974 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-19 00:45:24,996 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-19 00:45:24,999 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-19 00:45:25,020 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: filesample-main.stage1
+2020-06-19 00:45:25,027 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: filesample-console
+2020-06-19 00:45:25,033 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4dd9f448
+2020-06-19 00:45:25,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: filesample-console.stage1
+2020-06-19 00:45:25,046 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/kit:filesample-config
+2020-06-19 00:45:25,046 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@67d3d9e1
+2020-06-19 00:45:25,055 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/kit:filesample-config.stage1
+2020-06-19 00:45:25,080 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-19 00:45:25,098 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\filesample.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\june.xml'}]"
+2020-06-19 00:45:25,099 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\filesample.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\june.xml'}]"
+2020-06-19 00:45:25,102 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'june'                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 00:45:25,105 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-19 00:45:25,105 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-19 00:45:25,119 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-19 00:45:25,125 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-19 00:45:25,127 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: filesample-main
+2020-06-19 00:45:25,127 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: filesample-main.stage1
+2020-06-19 00:45:25,135 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2020-06-19 00:45:25,135 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: filesample-console
+2020-06-19 00:45:25,135 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: filesample-console.stage1
+2020-06-19 00:45:25,143 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/kit:filesample-config
+2020-06-19 00:45:25,144 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/kit:filesample-config.stage1
+2020-06-19 00:45:25,155 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-19 00:45:25,159 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: june                                                  *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-19 01:02:55,007 [[june].filesample-httpListenerConfig.worker.04] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/sample/api
+2020-06-19 01:02:55,007 [[june].filesample-httpListenerConfig.worker.04] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/console/*, (*)/api/*]
+2020-06-19 01:02:55,397 [[june].filesample-httpListenerConfig.worker.04] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/favicon.ico
+2020-06-19 01:02:55,397 [[june].filesample-httpListenerConfig.worker.04] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/console/*, (*)/api/*]
+2020-06-19 01:03:16,435 [[june].filesample-httpListenerConfig.worker.06] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/sample/api/kit
+2020-06-19 01:03:16,435 [[june].filesample-httpListenerConfig.worker.06] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/console/*, (*)/api/*]
+2020-06-19 01:03:50,858 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'june'                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 01:03:50,861 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: filesample-main
+2020-06-19 01:03:50,861 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: filesample-main.stage1
+2020-06-19 01:03:50,941 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: filesample-console
+2020-06-19 01:03:50,942 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: filesample-console.stage1
+2020-06-19 01:03:51,141 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/kit:filesample-config
+2020-06-19 01:03:51,141 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/kit:filesample-config.stage1
+2020-06-19 01:03:51,344 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-19 01:03:51,355 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081
+2020-06-19 01:03:51,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-19 01:03:51,357 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-19 01:03:51,364 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'june'                                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 01:03:51,365 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-19 01:03:51,366 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: filesample-main
+2020-06-19 01:03:51,366 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: filesample-main.stage1
+2020-06-19 01:03:51,367 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: filesample-console
+2020-06-19 01:03:51,367 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: filesample-console.stage1
+2020-06-19 01:03:51,367 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/kit:filesample-config
+2020-06-19 01:03:51,367 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/kit:filesample-config.stage1
+2020-06-19 01:03:51,372 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-19 01:03:51,415 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@2addc0f6: startup date [Fri Jun 19 00:45:24 IST 2020]; root of context hierarchy
+2020-06-19 01:03:51,418 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "june" shut down normally on: 19/6/20 1:03 AM          *
+* Up for: 0 days, 0 hours, 18 mins, 26.316 sec                       *
+**********************************************************************
+2020-06-19 01:03:51,567 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'june'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 01:03:51,577 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-19 01:03:51,582 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-19 01:03:51,595 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-19 01:03:51,596 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-19 01:03:51,600 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@48f4e5db: startup date [Fri Jun 19 01:03:51 IST 2020]; root of context hierarchy
+2020-06-19 01:03:51,920 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-19 01:03:52,045 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\june\queue-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\june\queue-tx-log\tx2.log
+2020-06-19 01:03:52,046 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs D:\mule-apps\.mule\.\.mule\june\queue-xa-tx-log\tx1.log and D:\mule-apps\.mule\.\.mule\june\queue-xa-tx-log\tx2.log
+2020-06-19 01:03:52,056 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2020-06-19 01:03:52,058 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: filesample-main
+2020-06-19 01:03:52,058 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2020-06-19 01:03:52,058 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2020-06-19 01:03:52,059 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2020-06-19 01:03:52,059 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2020-06-19 01:03:52,059 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2020-06-19 01:03:52,065 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: filesample-main.stage1
+2020-06-19 01:03:52,067 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: filesample-console
+2020-06-19 01:03:52,067 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5cdd6155
+2020-06-19 01:03:52,072 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: filesample-console.stage1
+2020-06-19 01:03:52,073 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/kit:filesample-config
+2020-06-19 01:03:52,074 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@506913b1
+2020-06-19 01:03:52,078 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/kit:filesample-config.stage1
+2020-06-19 01:03:52,102 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2020-06-19 01:03:52,122 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\filesample.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\june.xml'}]"
+2020-06-19 01:03:52,122 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\filesample.xml'}, ConfigResource{resourceName='D:\mule-apps\.mule\apps\june\june.xml'}]"
+2020-06-19 01:03:52,124 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'june'                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 01:03:52,127 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2020-06-19 01:03:52,127 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2020-06-19 01:03:52,140 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2020-06-19 01:03:52,145 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2020-06-19 01:03:52,147 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: filesample-main
+2020-06-19 01:03:52,147 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: filesample-main.stage1
+2020-06-19 01:03:52,155 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2020-06-19 01:03:52,155 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: filesample-console
+2020-06-19 01:03:52,155 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: filesample-console.stage1
+2020-06-19 01:03:52,163 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/kit:filesample-config
+2020-06-19 01:03:52,164 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/kit:filesample-config.stage1
+2020-06-19 01:03:52,174 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2020-06-19 01:03:52,180 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: june                                                  *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2020-06-19 01:07:50,361 [[june].filesample-httpListenerConfig.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/sample/api/kit
+2020-06-19 01:07:50,361 [[june].filesample-httpListenerConfig.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/console/*, (*)/api/*]
+2020-06-19 01:33:58,455 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'june'                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 01:33:58,464 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: filesample-main
+2020-06-19 01:33:58,465 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: filesample-main.stage1
+2020-06-19 01:33:58,621 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: filesample-console
+2020-06-19 01:33:58,621 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: filesample-console.stage1
+2020-06-19 01:33:58,821 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/kit:filesample-config
+2020-06-19 01:33:58,821 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/kit:filesample-config.stage1
+2020-06-19 01:33:59,023 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2020-06-19 01:33:59,027 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081
+2020-06-19 01:33:59,028 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2020-06-19 01:33:59,029 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2020-06-19 01:33:59,035 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'june'                                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 01:33:59,036 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-19 01:33:59,036 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: filesample-main
+2020-06-19 01:33:59,037 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: filesample-main.stage1
+2020-06-19 01:33:59,037 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: filesample-console
+2020-06-19 01:33:59,037 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: filesample-console.stage1
+2020-06-19 01:33:59,037 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/kit:filesample-config
+2020-06-19 01:33:59,037 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/kit:filesample-config.stage1
+2020-06-19 01:33:59,038 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2020-06-19 01:33:59,076 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@48f4e5db: startup date [Fri Jun 19 01:03:51 IST 2020]; root of context hierarchy
+2020-06-19 01:33:59,087 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "june" shut down normally on: 19/6/20 1:33 AM          *
+* Up for: 0 days, 0 hours, 30 mins, 6.961 sec                        *
+**********************************************************************
+2020-06-19 01:33:59,317 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'june'                                  +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2020-06-19 01:33:59,334 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2020-06-19 01:33:59,343 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2020-06-19 01:33:59,379 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2020-06-19 01:33:59,379 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2020-06-19 01:33:59,383 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@35eb4aaf: startup date [Fri Jun 19 01:33:59 IST 2020]; root of context hierarchy
+2020-06-19 01:34:00,066 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2020-06-19 01:34:00,070 [Mule.app.deployer.monitor.1.thread.1] ERROR org.mule.module.launcher.application.DefaultMuleApplication - null
+org.xml.sax.SAXParseException: cvc-complex-type.2.4.b: The content of element 'flow' is not complete. One of '{"http://www.mulesoft.org/schema/mule/core":annotations, "http://www.mulesoft.org/schema/mule/core":description, "http://www.mulesoft.org/schema/mule/core":abstract-message-source, "http://www.mulesoft.org/schema/mule/core":abstract-inbound-endpoint, "http://www.mulesoft.org/schema/mule/core":abstract-message-processor, "http://www.mulesoft.org/schema/mule/core":abstract-outbound-endpoint, "http://www.mulesoft.org/schema/mule/core":abstract-mixed-content-message-processor, "http://www.mulesoft.org/schema/mule/core":response}' is expected.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.elementLocallyValidComplexType(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.elementLocallyValidType(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processElementContent(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleEndElement(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.endElement(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source) ~[?:1.8.0_251]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source) ~[?:1.8.0_251]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) ~[spring-beans-4.3.25.RELEASE.jar:4.3.25.RELEASE]
+	at org.mule.config.spring.MuleDocumentLoader.loadDocument(MuleDocumentLoader.java:91) ~[mule-module-spring-config-3.9.4.jar:3.9.4]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) ~[spring-beans-4.3.25.RELEASE.jar:4.3.25.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) ~[spring-beans-4.3.25.RELEASE.jar:4.3.25.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) ~[spring-beans-4.3.25.RELEASE.jar:4.3.25.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.3.25.RELEASE.jar:4.3.25.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181) ~[spring-beans-4.3.25.RELEASE.jar:4.3.25.RELEASE]
+	at org.mule.config.spring.MuleArtifactContext.loadBeanDefinitions(MuleArtifactContext.java:199) ~[mule-module-spring-config-3.9.4.jar:3.9.4]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) ~[spring-context-4.3.25.RELEASE.jar:4.3.25.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614) ~[spring-context-4.3.25.RELEASE.jar:4.3.25.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:514) ~[spring-context-4.3.25.RELEASE.jar:4.3.25.RELEASE]
+	at org.mule.config.spring.SpringRegistry.doInitialise(SpringRegistry.java:108) ~[mule-module-spring-config-3.9.4.jar:3.9.4]
+	at org.mule.registry.AbstractRegistry.initialise(AbstractRegistry.java:104) ~[mule-core-3.9.4.jar:3.9.4]
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.createSpringRegistry(SpringXmlConfigurationBuilder.java:177) ~[mule-module-spring-config-3.9.4.jar:3.9.4]
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.doConfigure(SpringXmlConfigurationBuilder.java:100) ~[mule-module-spring-config-3.9.4.jar:3.9.4]
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43) ~[mule-core-3.9.4.jar:3.9.4]
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69) ~[mule-core-3.9.4.jar:3.9.4]
+	at org.mule.config.builders.AutoConfigurationBuilder.autoConfigure(AutoConfigurationBuilder.java:102) ~[mule-core-3.9.4.jar:3.9.4]
+	at org.mule.config.builders.AutoConfigurationBuilder.doConfigure(AutoConfigurationBuilder.java:54) ~[mule-core-3.9.4.jar:3.9.4]
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43) ~[mule-core-3.9.4.jar:3.9.4]
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69) ~[mule-core-3.9.4.jar:3.9.4]
+	at org.mule.context.DefaultMuleContextFactory$1.configure(DefaultMuleContextFactory.java:89) ~[mule-core-3.9.4.jar:3.9.4]
+	at org.mule.context.DefaultMuleContextFactory.doCreateMuleContext(DefaultMuleContextFactory.java:222) ~[mule-core-3.9.4.jar:3.9.4]
+	at org.mule.context.DefaultMuleContextFactory.createMuleContext(DefaultMuleContextFactory.java:81) ~[mule-core-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.application.DefaultMuleApplication.init(DefaultMuleApplication.java:210) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$2.execute(ArtifactWrapper.java:64) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:137) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.init(ArtifactWrapper.java:59) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:70) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:93) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.DefaultArchiveDeployer.redeploy(DefaultArchiveDeployer.java:496) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.DefaultArchiveDeployer.redeploy(DefaultArchiveDeployer.java:432) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.redeployModifiedArtifacts(DeploymentDirectoryWatcher.java:568) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.redeployModifiedApplications(DeploymentDirectoryWatcher.java:545) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.run(DeploymentDirectoryWatcher.java:357) ~[mule-module-launcher-3.9.4.jar:3.9.4]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_251]
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source) ~[?:1.8.0_251]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source) ~[?:1.8.0_251]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[?:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_251]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+2020-06-19 01:34:00,073 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - App 'june' never started, nothing to dispose of

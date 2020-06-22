@@ -1,0 +1,16 @@
+#%RAML 0.8
+title: xml-personal
+
+/personal: 
+  get: 
+    description: this fetches the personal details of a person
+    responses: 
+      200: 
+        body: 
+          application/json: 
+            example: |
+              <customerID>"100"</customerID>
+              <Name>"Sanju"</Name>
+              <Gender>"Male"</Gender>
+              <Phone>"12345"</Phone>
+              <Email>"test@gmail.com"</Email>

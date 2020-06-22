@@ -1,0 +1,16 @@
+#%RAML 0.8
+title: xml-account
+version: 1.0
+
+/account:
+  get: 
+     
+    responses: 
+      200: 
+        body: 
+          application/xml:  
+            example: |
+              <Phone>"12345"</Phone>
+              <Account_Number>"122222222"</Account_Number>
+              <Balance>"100000.00"</Balance>
+              <Provider>"HDFC Bank"</Provider>

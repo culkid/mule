@@ -1,0 +1,27 @@
+#%RAML 0.8
+title: filesample
+baseUri: http://localhost:8081/sample/api
+/kit:
+  description: this is implementation file
+  get: 
+    description: this is get method
+    body: 
+      application/json: 
+        example: |
+          [
+            {
+              "name":"sky",
+              "age":100
+            }
+          ]
+    responses: 
+      200: 
+        body:  
+          application/json: 
+            example: |
+              [
+                {
+                  "name":"sky",
+                  "age":100
+                }
+              ]
